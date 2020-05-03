@@ -1,0 +1,36 @@
+.header{
+  background-color: black;
+  height: 70px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  &__title{
+    // background-color: red;
+    height:40px;
+    width: 500px;
+    margin-left: 50px;
+    a{
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+      line-height: 40px;
+    }
+  }
+  &__options{
+    // background-color: blue;
+    height: 40px;
+    width: 300px;
+    margin-right: 50px;
+    .options-list{
+      display: flex;
+      a{
+        color: white;
+        margin-left: 20px;
+        line-height: 40px;
+      }
+    }
+  }
+}
