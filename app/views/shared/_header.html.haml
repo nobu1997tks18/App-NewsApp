@@ -1,11 +1,12 @@
 .header
   .header__title
     = link_to 'Learn From Experiences', '#'
+    %p ~Solutions from special experiences~
   .header__options
     %ul.options-list
       %li.user-page
         =link_to "My account", "#"
       %li.about
-        =link_to "About", "#"
+        =link_to "About", about_path
       %li.Login
-        =link_to "Login", "#"
+        =link_to "SignUp", new_user_path

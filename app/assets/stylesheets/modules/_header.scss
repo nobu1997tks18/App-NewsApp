@@ -7,20 +7,24 @@
   justify-content: space-between;
   position: fixed;
   top: 0;
+  z-index: 10;
   &__title{
-    // background-color: red;
     height:40px;
-    width: 500px;
-    margin-left: 50px;
+    width: 700px;
+    margin-left: 30px;
+    display: flex;
+    line-height: 40px;
+    color: white;
+    p{
+      margin-left: 23px;
+    }
     a{
-      font-size: 30px;
+      font-size: 25px;
       font-weight: bold;
       color: white;
-      line-height: 40px;
     }
   }
   &__options{
-    // background-color: blue;
     height: 40px;
     width: 300px;
     margin-right: 50px;
