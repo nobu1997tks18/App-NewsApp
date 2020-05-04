@@ -1,13 +1,25 @@
 .signup{
-  .signup-page__title{
-    height: 300px;
-    width: 100vw;
-    h1{
-      font-size: 100px;
-      text-align: center;
-      color: white;
-      background-color: black;
-      border-bottom: 1px solid grey;
+  height: 300px;
+  width: 100vw;
+  &__title{
+    font-size: 100px;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border-bottom: 1px solid grey;
+  }
+  &__form{
+    width:500px;
+    margin: 30px auto;
+    .form{
+      display: flex;
+      flex-direction: column;
+      line-height: 40px;
+    }
+    .form-submit{
+      width: 60px;
+      margin-top: 20px;
+      background-color: grey;
     }
   }
 }

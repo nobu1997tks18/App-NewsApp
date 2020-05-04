@@ -1,10 +1,22 @@
 .signup
-  .signup-page__title
+  .signup__title
     %h1 Welcome To LFE!!
-  -# .sighup__form
-  -#   =form_with model:@user  do |f|
-  -#     -f.label :email
-  -#     -= f.email_field :email
+  .signup__form
+    =form_with model:@user, local: true do |f|
+      .form.form-name
+        =f.label :name
+        =f.text_field :name
+      .form.form-email
+        =f.label :email
+        =f.email_field :email
+      -# .form.form-password
+      -#   =f.label :password
+      -#   =f.password_field :password
+      -# .form.form-comfirmation
+      -#   =f.label :password_confirmation
+      -#   =f.password_field :password_confirmation
+      .form.form-submit
+        =f.submit "送信" 
 
 
 
