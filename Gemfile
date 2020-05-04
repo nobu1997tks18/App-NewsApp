@@ -38,6 +38,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'haml-rails'
 gem 'erb2haml'
+gem 'bcrypt'
 
 
 group :development, :test do
