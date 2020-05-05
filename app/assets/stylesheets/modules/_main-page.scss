@@ -1,7 +1,6 @@
 .main-page{
   display: flex;
   &__sidebar{
-    margin-top: 70px;
     height: calc(100vh - 70px);
     width: 200px;
     overflow: scroll;
@@ -28,7 +27,7 @@
     }
   }
   &__center{
-    margin: 70px 0 0 250px;
+    margin-left: 250px;
     height: 100vh;
     width: calc(100vw - 200px);
     background-color: #EEEEEE;

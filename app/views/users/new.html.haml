@@ -1,8 +1,10 @@
 .signup
+  =render 'shared/header'
   .signup__title
     %h1 Welcome To LFE!!
   .signup__form
     =form_with model:@user, local: true do |f|
+      = render 'shared/errors_messages'
       .form.form-name
         =f.label :name
         =f.text_field :name
@@ -17,6 +19,7 @@
         =f.password_field :password_confirmation
       .form.form-submit
         =f.submit "送信" 
+
 
 
 

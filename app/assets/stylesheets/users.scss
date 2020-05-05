@@ -1,25 +1,36 @@
 .signup{
-  height: 300px;
-  width: 100vw;
+  height: 100vh;
+  padding-top: 120px;
+  background-color: #eeeeee;
   &__title{
-    font-size: 100px;
+    width: 800px;
+    font-size: 70px;
     text-align: center;
-    color: white;
-    background-color: black;
-    border-bottom: 1px solid grey;
+    color: black;
+    margin: 0 auto 0 auto;
   }
   &__form{
     width:500px;
-    margin: 30px auto;
+    margin: 0 auto;
+    padding-top: 20px;
+    #errors_list{
+      color: red;
+    }
     .form{
       display: flex;
       flex-direction: column;
       line-height: 40px;
+      input{
+        width: 500px;
+      }
     }
     .form-submit{
-      width: 60px;
-      margin-top: 20px;
-      background-color: grey;
+      input{
+        margin-top: 40px;
+        background-color: grey;
+        color: white;
+        border-radius: 5px;
+      }
     }
   }
 }
