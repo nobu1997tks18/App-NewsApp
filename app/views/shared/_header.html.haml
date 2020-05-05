@@ -4,9 +4,19 @@
     %p ~Solutions from special experiences~
   .header__options
     %ul.options-list
-      %li.user-page
+      %li.options-list__user-page
         =link_to "Home", root_path
-      %li.about
+      %li.options-list__about
         =link_to "About", about_path
-      %li.Login
-        =link_to "SignUp", new_user_path
+      - if user_login?
+        %li
+          =link_to "My account", user_path(@current_user)
+        %li
+          =link_to "Edit", edit_user_path(@current_user)
+        %li
+          =link_to "Logout", logout_path,{method: :delete}
+      - else
+        %li.options-list__login
+          =link_to "Login", login_path
+        %li.options-list__signup
+          =link_to "SignUp", new_user_path

@@ -26,13 +26,14 @@
   }
   &__options{
     height: 40px;
-    width: 300px;
+    margin-right: 40px;
     .options-list{
       display: flex;
       a{
         color: white;
         margin-left: 20px;
         line-height: 40px;
+        font-size: 15px;
       }
     }
   }
