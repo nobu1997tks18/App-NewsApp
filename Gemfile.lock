@@ -80,6 +80,8 @@ GEM
     erubi (1.9.0)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (2.11.0)
+      i18n (>= 1.6, < 2)
     ffi (1.12.2)
     formatador (0.2.5)
     globalid (0.4.2)
@@ -244,6 +246,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   erb2haml
+  faker
   guard (= 2.16.2)
   guard-minitest (= 2.4.4)
   haml-rails

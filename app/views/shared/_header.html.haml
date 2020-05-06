@@ -10,11 +10,13 @@
         =link_to "About", about_path
       - if user_login?
         %li
+          =link_to "Edit", edit_user_path(@current_user)
+        %li
           =link_to @current_user.name, user_path(@current_user)
         %li
           =link_to "Logout", logout_path,{method: :delete}
       - else
-        %li.options-list__login
-          =link_to "Login", login_path
         %li.options-list__signup
           =link_to "SignUp", new_user_path
+        %li.options-list__login
+          =link_to "Login", login_path

@@ -1,3 +1,59 @@
 =render 'shared/header'
-= @user.name
-= @user.email
+.account-page
+  .user-data
+    .user-data__image
+    .user-data__username
+      =@user.name
+    .user-data__follower
+      =link_to "following 10/"
+      =link_to "follower 10"
+    - if current_user.admin? && !current_user?(@user) 
+      =link_to "アカウント削除", user_path, method: :delete, data: {confirm: "削除してよろしいですか？"}
+    .user-data__topics
+      %h2 Pickup Topics
+      %ul
+        %li コロナウイルス
+        %li オリンピック
+        %li プレミアリーグ
+        
+
+  .user-comments
+    .user-comments__title
+      %h2 コメント一覧
+    .user-comments__content
+      .user-image
+      .content-user-name
+        =@user.name
+      .content-date
+        2019/04/03/00:00:00
+      .content-comment
+        これは非常に参考になる記事です！
+
+    .user-comments__content
+      .user-image
+      .content-user-name
+        =@user.name
+      .content-date
+        2019/04/03/00:00:00
+      .content-comment
+        これは非常に参考になる記事です！
+
+    .user-comments__content
+      .user-image
+      .content-user-name
+        =@user.name
+      .content-date
+        2019/04/03/00:00:00
+      .content-comment
+        これは非常に参考になる記事です！
+
+    .user-comments__content
+      .user-image
+      .content-user-name
+        =@user.name
+      .content-date
+        2019/04/03/00:00:00
+      .content-comment
+        これは非常に参考になる記事です！
+    
+  

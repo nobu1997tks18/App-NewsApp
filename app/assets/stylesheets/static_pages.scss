@@ -1,1 +1,129 @@
+.main-page{
+  display: flex;
+  &__sidebar{
+    height: calc(100vh - 70px);
+    width: 200px;
+    overflow: scroll;
+    position: fixed;
+    left: 0;
+    .topics{
+      width: 180px;
+      margin:20px 0 30px 10px;
+      padding: 5px;
+      font-weight: bold;
+      border-bottom: 1px invert red;
+      h2{
+        font-weight: bold;
+        font-size: 23px;
+        border-bottom:1px inset grey;
+      }
+      .topic{
+        margin: 5px;
+        a{
+          color: grey;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &__center{
+    margin-left: 250px;
+    height: 100vh;
+    width: calc(100vw - 200px);
+    background-color: #EEEEEE;
+    overflow: scroll;
+    .top{
+      background-color: lightgray;
+      background-size: 200px;
+      height: 300px;
+      color: white;
+      position: relative;
+      .top__news{
+        position: absolute;
+        left: 15px;
+        bottom :20px;
+        a{
+          color: white;
+          font-size: 40px;
+        }
+        p{
+          margin-left: 60px;
+        }
+      }
+    }
+    .main-contents{ 
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      .main-content{
+        display: inline-block;
+        height: 200px;
+        width: 350px;
+        margin: 20px;
+        border-radius: 5%;
+        background-color: white;
+        position: relative;
+        a{
+          color: white;
+          font-size: 45px;
+          font-weight: bold;
+          display: block;
+          position: absolute;
+          left:40px;
+          bottom: 10px;
+        }
+      }
+      .content1{
+        background-image: url(life.jpg);
+      }
+      .content2{
+        background-image: url(corona.jpg);
+      }
+      .content3{
+        background-image: url(orinpic.jpg);
+      }
+      .content4{
+        background-image: url(life.jpg);
+      }
+      .content5{
+        background-image: url(life.jpg);
+      }
+      .content6{
+        background-image: url(business.jpg);
+      }
+      .content7{
+        background-image: url(enviromemt.jpg);
+      }
+      .content8{
+        background-image: url(life.jpg);
+      }
+      .content9{
+        background-image: url(sports.jpg);
+        background-position: left 80% top 50%;
+      }
+    }
 
+
+
+
+    .main-info{
+      height: 80px;
+      border-top: 1px solid rgba(128,128,128,0.3);
+      color: grey;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      p{
+        margin-left: 20px;
+      }
+      .my-links{
+        margin-right: 50px;
+        a{
+          color:grey;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

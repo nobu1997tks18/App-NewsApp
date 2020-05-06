@@ -1,0 +1,28 @@
+*{
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+.debug{
+  display: block;
+  background-color: grey;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.flash{
+  margin: 0 auto 0 auto;
+  text-align: center;
+  margin-top: 70px;
+  .succsess{
+    background-color: skyblue;
+    color: white;
+  }
+  .alert{
+    background-color: red;
+    color: white;
+  }
+}

@@ -39,6 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'bcrypt'
+gem 'faker'
 
 
 group :development, :test do
