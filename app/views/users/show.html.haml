@@ -5,8 +5,13 @@
     .user-data__username
       =@user.name
     .user-data__follower
-      =link_to "following 10/"
-      =link_to "follower 10"
+      =render 'follow_link'
+    .user-data__btn
+      -unless current_user?(@user)
+        -if @current_user.following?(@user)
+          =render 'unfollow_btn'
+        -else
+          =render 'follow_btn'
     - if current_user.admin? && !current_user?(@user) 
       =link_to "アカウント削除", user_path, method: :delete, data: {confirm: "削除してよろしいですか？"}
     .user-data__topics

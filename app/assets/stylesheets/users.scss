@@ -46,7 +46,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 120px;
+    padding-top: 40px;
     &__image{
       height: 200px;
       width: 200px;
@@ -63,6 +63,25 @@
     }
     &__follower{
       text-align: center;
+      display: flex;
+      a{
+        color: black;
+        border-bottom: 1px solid black;
+        width: 160px;
+      }
+    }
+    &__btn{
+      input{
+        width: 200px;
+        margin-top: 20px;
+        border-radius: 50px;
+      }
+      .follow{
+        background-color: skyblue;
+      }
+      .unfollow{
+        background-color: grey;
+      }
     }
     &__topics{
       margin-top: 50px;

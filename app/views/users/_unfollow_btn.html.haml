@@ -1,0 +1,2 @@
+=form_with(model: current_user.following_relationships.find_by(following_id: @user), method: :delete)  do |f|
+  = f.submit "Un follow", class: "unfollow"

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   attr_accessor :name, :email
-  before_action :check_login_user?, only:[:show, :edit, :update]
+  before_action :check_login_user?, only:[:show, :edit, :update, :followings, :followers]
   before_action :check_current_user?, only:[:edit, :update]
   before_action :check_admin_or_current_user?,  only:[:destroy]
 
@@ -46,14 +46,14 @@ class UsersController < ApplicationController
 
   def followings
     @user = User.find(params[:id])
-    @users = User.followings
-    render followings_user_path
+    @users = @user.followings
+    render 'following_list'
   end
 
   def followers
     @user = User.find(params[:id])
-    @users = User.followers
-    render followers_user_path
+    @users = @user.followers
+    render 'follower_list'
   end
 
 
