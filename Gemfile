@@ -41,6 +41,7 @@ gem 'erb2haml'
 gem 'bcrypt'
 gem 'faker'
 gem 'pry-rails'
+gem 'news-api'
 
 
 group :development, :test do
