@@ -14,7 +14,7 @@ User.create(
   )
 
 99.times do 
-  name = Faker::Name.name
+  name = Faker::Name.last_name
   email = Faker::Internet.email
   password = "password"
   User.create(

@@ -40,6 +40,7 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'bcrypt'
 gem 'faker'
+gem 'pry-rails'
 
 
 group :development, :test do

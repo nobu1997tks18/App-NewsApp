@@ -1,5 +1,16 @@
--@user.followings.each do |following|
-  .following__data
-    .user__image
-    .user__name
-      =following.name
+= render 'shared/header'
+.follow-list
+  -@user.followings.each do |following|
+    .follow-list__data
+      .user-image
+      .user-name
+        =link_to "#{following.name}", user_path(following)
+      .follow_btn
+        -if current_user.following?(following)
+          =form_with(model: current_user.following_relationships.find_by(following_id: following), method: :delete)  do |f|
+            = f.submit "フォロー中", class: "unfollow list-btn"
+        - else
+          =form_with(model: current_user.following_relationships.build)  do |f|
+            = hidden_field_tag :following_id, following.id
+            = f.submit "フォローする", class: "follow list-btn"
+
