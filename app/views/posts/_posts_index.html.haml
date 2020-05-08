@@ -1,0 +1,19 @@
+.user-posts
+  .user-posts__title
+    %h2
+      =yield(:page_title)
+  .user-posts__content
+    -@current_user.followings.each do |following|
+      -following.posts.each do |post|
+        .fixed-data
+          .post-user-image
+          .postuser-name
+            =post.user.name
+          .post-date
+            =post.created_at
+        .post
+          =post.content
+        .url
+          %p URL :
+          =link_to "#{post.url}", post.url, target: :blank
+

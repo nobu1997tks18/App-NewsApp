@@ -7,6 +7,7 @@
   background-size: 100%;
   position: fixed;
   right: 0;
+  overflow: scroll;
   &__title{
     font-size: 50px;
     padding-bottom: 20px;
@@ -40,52 +41,45 @@
     }
     .post{
       font-size: 15px;
-      margin-left: 30px;
+      margin-left: 70px;
+    }
+    .url{
+      display: flex;
+      margin-left: 70px;
+      p{
+        margin-right: 10px;
+      }
+      a{
+        color: white;
+        border-bottom: 1px solid rgba(255,255,255,0.6);
+      }
     }
   }
 }
 
-// .user-posts-form{
-//   height: 80px;
-//   width: calc(100vw - 350px);
-//   padding: 20px;
-//   background-color: black;
-//   display: flex;
-//   align-items: center;
-//   position: fixed;
-//   right: 0;
-//   bottom: 0;
-//   color: white;
-//   .post-form{
-//     &__text{
-//       display: flex;
-//       p{
-//         width: 80px;
-//       }
-//       input{
-//         width: 800px;
-//         border: 1px solid black;
-//       }
-//     }
-//     &__url{
-//       display: flex;
-//       p{
-//         width: 80px;
-//       }
-//       input{
-//         width: 800px;
-//         border: 1px solid black;
-//       }
-//     }
-//   }
-//   .post-btn{
-//     input{
-//       border-style: none;
-//       display: block;
-//       height: 50px;
-//       width: 80px;
-//       margin-left: 30px;
-//       background-color: white;
-//     }
-//   }
-// }
+.post-create{
+  height: calc(100vh - 70px);
+  width: 100vw;
+  color: white;
+  background-image: url("new_post.jpg");
+  background-size: 100%;
+  padding-top: 70px;
+  &__form{
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 50px;
+    height: 100%;
+    width: 600px;
+    padding: 30px;
+    width: 800px;
+    margin: 0 auto;
+    .title{
+      font-size: 70px;
+      color: black;
+      text-align: center;
+    }
+    .form{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
