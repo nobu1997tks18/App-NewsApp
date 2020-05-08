@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   before_action :check_admin_or_current_user?,  only:[:destroy]
   def index
     @user = current_user
+    @followings = @user.followings if @current_user
   end
   
   def show

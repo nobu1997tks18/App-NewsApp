@@ -2,15 +2,20 @@
   .user-posts__title
     %h2
       =yield(:page_title)
-  .user-posts__content
-    -@user.posts.each do |post|
-      .fixed-data
-        .post-user-image
-        .postuser-name
-          =post.user.name
-        .post-date
-          =post.created_at
-      .post
-        =post.content
-      .url
-        =link_to "#{post.url}", post.url, target: :blank
+  -@user.posts.each do |post|
+    .user-posts__content
+      .user-image
+      .content-flex
+        .fixed-data
+          .fixed-data__name
+            =post.user.name
+          .fixed-data__genre
+            ="ジャンル：#{post.genre}"
+          .fixed-data__date
+            =post.created_at
+        .posted-item
+          .url
+            %p URL
+            =link_to "#{post.url}", post.url, target: :blank
+          .post
+            =post.content

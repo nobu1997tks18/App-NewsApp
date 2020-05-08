@@ -11,8 +11,7 @@ Rails.application.routes.draw do
     end
   end
   resources :relationships, only:[:create, :destroy]
-  resources :posts, only:[:new, :create, :destroy]
-  
+  resources :posts, only:[:new,:create, :destroy]
     get 'news/topics'
     get 'news/bbc'
     get 'news/wsj'

@@ -5,7 +5,7 @@
   .header__options
     %ul.options-list
       %li.options-list__user-page
-        =link_to "Home", root_path
+        =link_to "Top", root_path
       - if user_login?
         %li
           =link_to "Post", new_post_path

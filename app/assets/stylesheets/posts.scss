@@ -1,57 +1,60 @@
 .user-posts{
-  height: 100vh;
-  width: 75%;
-  padding: 40px;
-  color: white;
-  background-image: url("comment.jpg");
+  height: calc(100vh - 70px);
+  width: calc(100vw - 350px);
+  background-image: url('top.jpg');
   background-size: 100%;
+  color: white;
+  padding: 20px;
   position: fixed;
   right: 0;
-  overflow: scroll;
   &__title{
+    width: calc(100vw - 350px);
     font-size: 50px;
-    padding-bottom: 20px;
+    font-weight: bold;
   }
   &__content{
-    width: 600px;
+    // border: 1px solid white;
     display: flex;
-    flex-direction: column;
-    margin: 0 30px 30px 50px;
-    background-color: rgba(0,0,0,0.7);
-    .fixed-data{
-      display: flex;
-      align-items: center;
-      .post-user-image{
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        background-image: url('corona.jpg');
-        margin-right: 20px;
-      }
-      .post-user-name{
-        font-size: 15px;
-        font-weight: bold;
-      }
-      .post-date{
-        height: 12px;
-        font-size: 12px;
-        margin-left: 10px;
-        color: grey;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.8);
+    .user-image{
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: grey;
     }
-    }
-    .post{
-      font-size: 15px;
-      margin-left: 70px;
-    }
-    .url{
-      display: flex;
-      margin-left: 70px;
-      p{
-        margin-right: 10px;
+    .content-flex{
+      margin-left: 15px;
+      .fixed-data{
+        display: flex;
+        height: 40px;
+        &__name{
+          font-size: 20px;
+          line-height: 40px;
+          margin-right: 20px;
+        }
+        &__genre{
+          line-height: 40px;
+          margin-right: 30px;
+        }
+        &__date{
+          font-size: 15px;
+          line-height: 40px;
+          color:#eeeeee ;
+        }
       }
-      a{
-        color: white;
-        border-bottom: 1px solid rgba(255,255,255,0.6);
+      .posted-item{
+        .url{
+          display: flex;
+          a{
+            color: red;
+            border-bottom: 1px solid red;
+            margin-left: 15px;
+          }
+        }
+        .post{
+          padding: 10px 0;
+        }
       }
     }
   }
