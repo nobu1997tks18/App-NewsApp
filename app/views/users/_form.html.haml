@@ -1,26 +1,28 @@
-.input-form
+.input-page
   =render 'shared/header'
-  .input-form__title
-    %h1 
-      = yield(:title)
-  .input-form__template
-    =form_with model:@user, local: true do |f|
-      = render 'shared/errors_messages'
-      .form.form-name
-        =f.label :name
-        =f.text_field :name
-      .form.form-email
-        =f.label :email
-        =f.email_field :email
-      .form.form-password
-        =f.label :password
-        =f.password_field :password
-      .form.form-comfirmation
-        =f.label :password_confirmation
-        =f.password_field :password_confirmation
-      .form.form-submit
-        =f.submit "送信" 
-      .form.form-delete
-      - if user_login?
-        -unless @current_user.admin?
-          =link_to "アカウント削除はこちら", user_path, method: :delete, data: {confirm: "削除してよろしいですか？"}
+  .input-form
+    .input-form__content
+    .input-form__title
+      %h1 
+        = yield(:title)
+    .input-form__template
+      =form_with model:@user, local: true do |f|
+        = render 'shared/errors_messages'
+        .form.form-name
+          =f.label :name
+          =f.text_field :name
+        .form.form-email
+          =f.label :email
+          =f.email_field :email
+        .form.form-password
+          =f.label :password
+          =f.password_field :password
+        .form.form-comfirmation
+          =f.label :password_confirmation
+          =f.password_field :password_confirmation
+        .form.form-submit
+          =f.submit "送信" 
+        .form.form-delete
+        - if user_login?
+          -unless @current_user.admin?
+            =link_to "アカウント削除はこちら", user_path, method: :delete, data: {confirm: "削除してよろしいですか？"}

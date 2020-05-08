@@ -1,0 +1,12 @@
+.news-contents
+  .page-title
+    %h1
+      = yield(:page_title)
+  -@moments.each do |moment|
+    .news-content
+      .news-content__image
+        =image_tag src="#{moment['urlToImage']}", alt: 'リンク先の画像です', height: '200px', width: '300px'
+      .news-content__title
+        =link_to "#{moment['title']}","#{moment['url']}"
+      .news-content__link
+        =link_to "<#{moment['source']['name']}>","#{moment['url']}",target: :blank

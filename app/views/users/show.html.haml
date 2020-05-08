@@ -1,3 +1,4 @@
+=provide(:page_title, "コメント一覧")
 =render 'shared/header'
 .account-page
   .user-data
@@ -20,45 +21,7 @@
         %li コロナウイルス
         %li オリンピック
         %li プレミアリーグ
-        
 
-  .user-comments
-    .user-comments__title
-      %h2 コメント一覧
-    .user-comments__content
-      .user-image
-      .content-user-name
-        =@user.name
-      .content-date
-        2019/04/03/00:00:00
-      .content-comment
-        これは非常に参考になる記事です！
-
-    .user-comments__content
-      .user-image
-      .content-user-name
-        =@user.name
-      .content-date
-        2019/04/03/00:00:00
-      .content-comment
-        これは非常に参考になる記事です！
-
-    .user-comments__content
-      .user-image
-      .content-user-name
-        =@user.name
-      .content-date
-        2019/04/03/00:00:00
-      .content-comment
-        これは非常に参考になる記事です！
-
-    .user-comments__content
-      .user-image
-      .content-user-name
-        =@user.name
-      .content-date
-        2019/04/03/00:00:00
-      .content-comment
-        これは非常に参考になる記事です！
+  =render 'shared/post_page'
     
   

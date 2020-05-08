@@ -1,15 +1,16 @@
-.input-form
+.input-page
   =render 'shared/header'
-  .input-form__title
-    %h1 Login page
-  .input-form__template
-    =form_with scope: :session, url: login_path, local: true do |f|
-      .form.form-name
-        .form.form-email
-          =f.label :email
-          =f.email_field :email
-        .form.form-password
-          =f.label :password
-          =f.password_field :password
-        .form.form-submit
-          =f.submit "送信" 
+  .input-form
+    .input-form__title
+      %h1 Login page
+    .input-form__template
+      =form_with scope: :session, url: login_path, local: true do |f|
+        .form.form-name
+          .form.form-email
+            =f.label :email
+            =f.email_field :email
+          .form.form-password
+            =f.label :password
+            =f.password_field :password
+          .form.form-submit
+            =f.submit "送信" 

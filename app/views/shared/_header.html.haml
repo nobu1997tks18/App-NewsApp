@@ -6,8 +6,6 @@
     %ul.options-list
       %li.options-list__user-page
         =link_to "Home", root_path
-      %li.options-list__about
-        =link_to "About", about_path
       - if user_login?
         %li
           =link_to "Edit", edit_user_path(@current_user)

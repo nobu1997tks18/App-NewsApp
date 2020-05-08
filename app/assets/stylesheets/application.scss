@@ -1,9 +1,8 @@
-*{
-  box-sizing: border-box;
-}
-
 @import 'reset';
 @import 'modules/total';
 @import 'modules/header';
-@import 'static_pages';
+@import 'modules/side_bar';
+@import 'modules/post_page';
 @import 'users';
+@import 'news';
+

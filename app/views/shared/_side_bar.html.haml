@@ -1,0 +1,23 @@
+.side-contents
+  .side-title
+    - if user_login?
+      ="#{@current_user.name}さん"
+      %p 今日も１日頑張りましょう！
+    - else
+      %p サービスのご利用にはログインが必要です    
+  .side-content.top
+    =link_to "Top", root_path
+  .side-content.topic
+    =link_to "特集", news_topics_path
+  .side-content.bbc
+    =link_to "BBC", news_bbc_path
+  .side-content.wsj
+    =link_to "WSJ", news_wsj_path
+  .side-content.yahoo
+    =link_to "Yahoo!", news_yahoo_path
+  .side-content.nhk
+    =link_to "NHK", news_nhk_path
+  .side-content.goal
+    =link_to "Goal", news_goal_path
+  .side-content.soccer_king
+    =link_to "Soccer King", news_soccer_king_path

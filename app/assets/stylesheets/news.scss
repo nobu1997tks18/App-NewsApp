@@ -1,0 +1,56 @@
+.news-contents{
+  height: 100%;
+  width: 75%;
+  background-color:black;
+  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap ;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  overflow: scroll;
+  h1{
+    width: calc(100vw - 250px);
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    padding-left: 70px;
+  }
+  .news-content{
+    border: 1px solid black;
+    width: 350px;
+    &__image{
+      height: 200px;
+      color: rgba(0,0,0,0);
+      background-image: url('business.jpg');
+      img{
+        width: 350px;
+      }
+    }
+    &__title{
+      height: 150px;
+      a{
+        display: block;
+        height: 150px;
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+      }
+      background-color: white;
+      padding: 5px;
+    }
+    &__link{
+      text-align: right;
+      background-color: white;
+      padding: 5px;
+      a{
+        width: 350px;
+        display: block;
+        color: grey;
+        font-size: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+}
+

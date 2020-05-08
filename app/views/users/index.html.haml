@@ -1,0 +1,24 @@
+=provide(:page_title, "TOP")
+=render 'shared/header'
+=render 'shared/side_bar'
+-if user_login?
+  =render 'shared/post_page'
+  .user-posts-form
+    .post-form
+      .post-form__text
+        %p コメント
+        %input{type:"text",class:"form-text"}
+      .post-form__url
+        %p URL
+        %input{type:"url",class:"form-url"}
+    .post-btn
+      %input{type:"submit", class:"form-submit"}
+- else
+  .signup-user-page
+    %h1 Learn From Experience
+    %p あなたのニュースへの考え、共有しましょう
+    .links
+      =link_to "ユーザ登録", new_user_path
+      =link_to "ログイン", login_path
+
+    
