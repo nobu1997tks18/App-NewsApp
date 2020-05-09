@@ -1,5 +1,5 @@
+=render 'shared/header'
 .input-page
-  =render 'shared/header'
   .input-form
     .input-form__title
       %h1 Login page
@@ -14,3 +14,5 @@
             =f.password_field :password
           .form.form-submit
             =f.submit "送信" 
+          .easy-login
+            =link_to "お試しログイン", easy_login_path, method: :post

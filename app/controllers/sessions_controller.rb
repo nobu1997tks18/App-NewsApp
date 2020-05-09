@@ -19,4 +19,10 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
+  def easy_login
+    @user = User.second
+    login @user
+    flash[:succsess] ="ログインしました" 
+    redirect_to_stored_url_or root_path
+  end
 end

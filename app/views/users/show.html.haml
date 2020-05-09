@@ -14,8 +14,9 @@
           =render 'unfollow_btn'
         -else
           =render 'follow_btn'
-    - if current_user.admin? && !current_user?(@user) 
-      =link_to "アカウント削除", user_path, method: :delete, data: {confirm: "削除してよろしいですか？"}
+    .admin-btn
+      - if current_user.admin? && !current_user?(@user) 
+        =link_to "アカウント削除", user_path, method: :delete, data: {confirm: "削除してよろしいですか？"}
     .user-data__topics
       %h2 Pickup Topics
       %ul

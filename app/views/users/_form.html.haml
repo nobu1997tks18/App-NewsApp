@@ -9,20 +9,20 @@
       =form_with model:@user, local: true do |f|
         = render 'shared/user_errors_messages'
         .form.form-picture
-          =f.label :picture
-          =f.file_field :picture
+          =f.label "picture (任意)"
+          =f.file_field :picture, class: "file-field"
         .form.form-name
           =f.label :name
-          =f.text_field :name
+          =f.text_field :name,placeholder: "名前を入力してください"
         .form.form-email
           =f.label :email
-          =f.email_field :email
+          =f.email_field :email,placeholder: "メールアドレスを入力してください"
         .form.form-password
           =f.label :password
-          =f.password_field :password
+          =f.password_field :password,placeholder: "パスワードを入力してください（８文字以上）"
         .form.form-comfirmation
           =f.label :password_confirmation
-          =f.password_field :password_confirmation
+          =f.password_field :password_confirmation,placeholder: "もう一度パスワードを入力してください"
         .form.form-submit
           =f.submit "送信" 
         .form.form-delete

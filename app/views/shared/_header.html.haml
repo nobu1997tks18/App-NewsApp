@@ -4,8 +4,10 @@
     %p ~Solutions from special experiences~
   .header__options
     %ul.options-list
-      %li.options-list__user-page
+      %li
         =link_to "Top", root_path
+      %li
+        =link_to "About", about_path
       - if user_login?
         %li
           =link_to "Post", new_post_path

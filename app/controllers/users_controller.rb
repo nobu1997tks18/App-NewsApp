@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_action :check_login_user?, only:[:show, :edit, :update, :followings, :followers]
   before_action :check_current_user?, only:[:edit, :update]
   before_action :check_admin_or_current_user?,  only:[:destroy]
+  
   def index
     @user = current_user
     @followings = @user.followings if @current_user
@@ -61,6 +62,8 @@ class UsersController < ApplicationController
     render 'follower_list'
   end
 
+  def about
+  end
 
   private
   def params_user
