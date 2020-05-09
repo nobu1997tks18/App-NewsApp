@@ -21,7 +21,7 @@
   .links{
     display: flex;
     a{
-      width: 300px;
+      width: 330px;
       display: block;
       color: white;
       font-size: 40px;
@@ -38,9 +38,11 @@
 
 .input-page{
   height: calc(100vh - 70px);
-  padding-top: 70px;
+  width: 100vw;
+  padding: 70px;
   background-image: url('edit.jpg');
   background-size: 100%;
+  overflow: scroll;
   .input-form{
     background-color: rgba(255,255,255,0.6);
     border-radius: 50px;
@@ -97,12 +99,14 @@
     align-items: center;
     padding-top: 40px;
     &__image{
-      height: 200px;
-      width: 200px;
-      border: 1px solid black;
-      border-radius: 50%;
-      background-image: url('corona.jpg');
-      background-position: center;
+      img{
+        height: 200px;
+        width: 200px;
+        border: 1px solid black;
+        border-radius: 50%;
+        background-image: url('corona.jpg');
+        background-position: center;
+      }
     }
     &__username{
       height: 70px;

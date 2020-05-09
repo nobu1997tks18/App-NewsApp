@@ -3,6 +3,7 @@
 .account-page
   .user-data
     .user-data__image
+      = image_tag @user.picture.url
     .user-data__username
       =@user.name
     .user-data__follower

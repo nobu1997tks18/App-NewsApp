@@ -42,6 +42,12 @@ gem 'bcrypt'
 gem 'faker'
 gem 'pry-rails'
 gem 'news-api'
+gem 'carrierwave'
+gem 'mini_magick'
+
+group :deployment, :production do
+  gem 'fog'
+end
 
 
 group :development, :test do

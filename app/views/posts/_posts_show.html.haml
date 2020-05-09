@@ -5,6 +5,7 @@
   -@user.posts.each do |post|
     .user-posts__content
       .user-image
+        =image_tag post.user.picture.url
       .content-flex
         .fixed-data
           .fixed-data__name

@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  mount_uploader :picture, PictureUploader
   before_save {self.email = email.downcase}
 
   has_many :following_relationships, foreign_key: "follower_id", class_name: "Relationship", dependent: :destroy
@@ -7,6 +8,7 @@ class User < ApplicationRecord
   has_many :followers, through: :follower_relationships
   has_many :posts, dependent: :destroy
   has_secure_password
+
 
   validates :name, presence: true, length: {maximum:25}
   Email_Regex = /\A[\w\-.]+@\w*.(?!.*?\.\.)(\.[\w\.]+)\z/

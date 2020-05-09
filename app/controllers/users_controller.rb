@@ -36,7 +36,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update(params_user)
       flash[:succsess] = "変更内容を登録いたしました"
-      redirect_to root_path
+      redirect_to @user
     else
       flash.now[:alert] = "入力項目を確認してください"
       render :edit
@@ -64,7 +64,7 @@ class UsersController < ApplicationController
 
   private
   def params_user
-    params.require(:user).permit(:name, :email, :password, :password_confirmation )
+    params.require(:user).permit(:picture, :name, :email, :password, :password_confirmation )
   end
 
   def check_current_user?

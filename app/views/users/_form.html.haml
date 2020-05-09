@@ -1,5 +1,5 @@
+=render 'shared/header'
 .input-page
-  =render 'shared/header'
   .input-form
     .input-form__content
     .input-form__title
@@ -8,6 +8,9 @@
     .input-form__template
       =form_with model:@user, local: true do |f|
         = render 'shared/user_errors_messages'
+        .form.form-picture
+          =f.label :picture
+          =f.file_field :picture
         .form.form-name
           =f.label :name
           =f.text_field :name
