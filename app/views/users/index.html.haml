@@ -1,12 +1,12 @@
--# =provide(:page_title, "TOP")
+=provide(:page_title, "TOP")
 =render 'shared/header'
 =render 'shared/side_bar'
 -if user_login?
   =render 'posts/posts_index'
 - else
   .signup-user-page
-    %h1 Learn From Experience
-    %p あなたのニュースへの考え、共有しましょう
+    %h1 Output your reviews
+    %p ニュースの学びにアウトプットを
     .links
       =link_to "ユーザ登録", new_user_path
       =link_to "ログイン", login_path

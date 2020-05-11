@@ -3,6 +3,8 @@
   -@user.followings.each do |following|
     .follow-list__data
       .user-image
+        - if following.picture?
+          = image_tag following.picture.url, height: '50', width: '50', class: "user-image"
       .user-name
         =link_to "#{following.name}", user_path(following)
       .follow_btn

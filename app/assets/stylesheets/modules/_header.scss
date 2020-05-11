@@ -1,8 +1,8 @@
 .header{
   height: 70px;
   width: 100vw;
-  background-color: black;
-  border-bottom: 4px solid white ;
+  background-color: white;
+  border-bottom: 4px solid  ;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,14 +15,14 @@
     margin-left: 30px;
     display: flex;
     line-height: 40px;
-    color: white;
+    color: black;
     p{
       margin-left: 23px;
     }
     a{
       font-size: 25px;
       font-weight: bold;
-      color: white;
+      color: black;
     }
   }
   &__options{
@@ -31,7 +31,7 @@
     .options-list{
       display: flex;
       a{
-        color: white;
+        color: black;
         margin-left: 20px;
         line-height: 40px;
         font-size: 15px;

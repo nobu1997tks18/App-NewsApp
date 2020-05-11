@@ -8,25 +8,10 @@
         =render 'shared/post_errors_messages'
         .form
           =f.label "ジャンル"
-          =f.text_field :genre ,placeholder: "ジャンルを記入してください"
+          =f.select :genre ,{経済:"経済",ビジネス:"ビジネス",政治:"政治",マネー:"マネー",スポーツ:"スポーツ",海外:"海外",その他:"その他"}, class:"select-form"
           =f.label "投稿内容"
           =f.text_field :content ,placeholder: "投稿を記入してください"
           =f.label "サイトURL"
           = f.text_field :url, placeholder: "共有するサイトURLを記入してください"
         .form-submit
           = f.submit "投稿"
-
-
-
--# .post-create
--#   = form_with model: @post, local: true do |f|
--#     .post-create__form
--#       .title
--#         %h1 New Post
--#       =render 'shared/post_errors_messages'
--#       .form
--#         =f.label "投稿内容"
--#         = f.text_area :content ,placeholder: "投稿を記入してください"
--#         =f.label "サイトURL"
--#         = f.text_field :url, placeholder: "共有するサイトURLを記入してください"
--#         = f.submit "投稿"
