@@ -1,160 +1,189 @@
-.signup-user-page{
-  position: fixed;
-  right: 0;
-  height: 100vh;
-  width: 75%;
-  background-image: url(top.jpg);
-  background-size: 100%;
-  color: white;
-  padding-top: 70px;
-  h1{
-    font-size: 100px;
-    font-weight: bold;
-    margin: 25px;
-  }
-  p{
-    font-size: 25px;
-    font-weight: bold;
-    padding: 25px;
-    background-color: rgba(0,0,0,0.8);
-  }
-  .links{
-    display: flex;
-    a{
-      width: 330px;
-      display: block;
-      color: white;
-      font-size: 40px;
-      text-align: center;
-      background-color: rgba(0,0,0,0.8);
-      margin: 60px 0 0 25px;
-      border-radius: 25px;
-    }
-    a:hover{
-      border:5px solid white ;
-    }
-  }
-}
-
-
-.account-page{
-  display: flex;
-  height: calc(100vh - 70px);
-  background-color: black;
-  color: white;
-  .user-data{
-    height: calc(100vh - 70px);
-    width: 25%;
-    border-right: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 40px;
-    &__image{
-      img{
-        height: 200px;
-        width: 200px;
-        border: 1px solid black;
-        border-radius: 50%;
-        background-image: url('corona.jpg');
-        background-position: center;
-      }
-    }
-    &__username{
-      height: 70px;
-      font-size: 30px;
+.signup-page{
+  &__top{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(top.jpg);
+    background-size: 100%;
+    background-position:50% ;
+    color: white;
+    padding-top: 70px;
+    h1{
+      font-size: 100px;
       font-weight: bold;
-      line-height: 70px;
+      margin: 25px;
     }
-    &__follower{
-      text-align: center;
+    p{
+      font-size: 25px;
+      font-weight: bold;
+      padding: 25px;
+      background-color: $opacity-black;
+    }
+    .top-links{
       display: flex;
       a{
-        color: white;
+        width: 330px;
+        display: block;
+        color: black;
+        font-size: 40px;
+        text-align: center;
+        background-color: rgba(255,255,255,0.8);
+        margin: 60px 0 0 25px;
+        border-radius: 25px;
+      }
+      a:hover{
+        font-weight: bold;
+        background-color: white;
       }
     }
-    &__btn{
-      input{
-        width: 200px;
-        margin-top: 20px;
-        border-radius: 50px;
-      }
-      .follow{
-        background-color: skyblue;
-      }
-      .unfollow{
-        background-color: grey;
-      }
-    }
-    .admin-btn{
-      a{
-        color: white;
-        border-bottom: 1px solid black ;
-      }
-    }
-    &__topics{
-      margin-top: 50px;
-      border-radius: 50%;
+  }
+  &__center{
+    height: 100%;
+    h2{
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
       padding: 30px;
-      background-color: white;
-      color: black;
-      h2{
-        font-size: 35px;
-      }
-      ul{
-        margin-left: 40px;
-        li{
-          list-style: square;
+      background: $greyTowhite;
+    }
+    .intro-contents{
+      display: flex;
+      &__content{ 
+        width: 33%;
+        padding: 20px;
+        .intro-title{
+          height: 250px;
+          padding: 30px;
+        }
+        text-align: center;
+        .intro-title{
+          font-size:40px;
+          border-radius: 50%;
+        }
+        .intro-info{
+          font-size: 20px;
+        }
+        .intro-links{
+          @include news_link_btn;
+          .news-links{
+            flex-direction: column;
+            width:100%;
+          }
+        }
+        .intro-images{
+          height: 400px;
+          width: 300px;
+          margin: 15px auto;
+          background-color: grey;
         }
       }
     }
   }
 }
 
-.follow-list{
-  height: 100％;
+.user-info{
+  height: 50vh;
   width: 100vw;
-  padding: 20px;
-  overflow: scroll;
   display: flex;
-  flex-wrap: wrap;
-  .follow-list__data{
-    height: 60px;
-    width:300px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    border-bottom:1px solid lightgray;
-    border-radius: 5%;
-    margin: 15px;
-    .user-image{
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: gray;
-    }
-    .user-name{
-      line-height: 60px;
-      margin-left: 10px;
-      a{
-        color: black;
+  margin-top: 20px;
+  &__left{
+    height: 50vh;
+    width: 25%;
+    padding-left: 30px;
+    text-align: center;
+    .user-picture{
+      img{
+        height: 250px;
+        width: 250px;
+        border-radius: 25px;
       }
     }
+    .user-name{
+      width: 100%;
+      font-size: 35px;
+      font-weight: bold;
+      text-align: center;
+    }
     .list-btn{
-      height: 20px;
-      width: 90px;
-      font-size: 10px;
-      margin-left: 10px;
-      position: absolute;
-      right: 30px;
-      bottom: 20px;
-    }
-    .follow{
-      border: 1px solid black;
-    }
-    .unfollow{
-      background-color: grey;
+      display: block;
+      height: 40px;
+      width: 250px;
+      margin:  0 auto;
+      border-radius: 25px;
       color: white;
+    }
+    .follow-btn{
+      background-color: skyblue;
+    }
+    .unfollow-btn{
+      background-color: grey;
+    }
+  }
+  &__center{
+    width: 25%;
+    text-align: center;
+    .user-profile{
+      h2{
+        text-align: center;
+        font-size: 30px;
+        background:radial-gradient(lightgrey, white) ;
+        border-radius: 25px;
+      }
+      p{
+        padding: 5px 30px;
+        font-size: 15px;
+        text-align: left;
+      }
+    }
+  }
+  &__right{
+    height: 50vh;
+    width: 50%;
+    display: flex;
+    .follow-list{
+      width: 50%;
+      margin-left: 15px;
+      overflow: scroll;
+      display: flex;
+      flex-direction: column;
+      p{
+        text-align: center;
+        font-size: 30px;
+        background:radial-gradient(skyblue, white) ;
+        border-radius: 25px;
+      }
+      &__flex{
+        display: flex;
+        align-items: center;
+        .user-image{
+          img{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+          }
+        }
+        .user-name{
+          a{
+            display: block;
+            width: 200px;
+            line-height: 50px;
+            font-weight: bold;
+            color: black;
+            padding-left: 10px;
+          }
+        }
+        .list-btn{
+          width: 80px;
+          font-size: 10px;
+          padding: 5px;
+          color: white;
+        }
+        .follow-btn{
+          background-color: skyblue;
+        }
+        .unfollow-btn{
+          background-color: grey;
+        }
+      }
     }
   }
 }

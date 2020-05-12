@@ -1,0 +1,4 @@
+.follow-list
+  -@user.followings.each do |following|
+    =render partial: 'follow_list', locals:{follow: following}
+

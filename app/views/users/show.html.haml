@@ -1,29 +1,37 @@
-=provide(:page_title, "コメント一覧")
-=render 'shared/header'
-.account-page
-  .user-data
-    .user-data__image  
-      = image_tag @user.picture.url
-    .user-data__username
-      =@user.name
-    .user-data__follower
-      =render 'follow_link'
-    .user-data__btn
-      -unless current_user?(@user)
-        -if @current_user.following?(@user)
-          =render 'unfollow_btn'
-        -else
-          =render 'follow_btn'
-    .admin-btn
-      - if current_user.admin? && !current_user?(@user) 
-        =link_to "アカウント削除", user_path, method: :delete, data: {confirm: "削除してよろしいですか？"}
-    .user-data__topics
-      %h2 Pickup Topics
-      %ul
-        %li コロナウイルス
-        %li オリンピック
-        %li プレミアリーグ
+=provide(:page_title, "コメント一覧(#{@user.posts.count})")
+.news-links
+  =render 'shared/news_link_btn'
 
-  =render 'posts/posts_show'
+.user-info
+  .user-info__left
+    .user-picture
+      = image_tag @user.picture.url 
+    .user-name
+      = @user.name
+    .follow_unfollow_btn
+      =follow_unfollow?(@user)
+      
+  .user-info__center
+    .user-profile
+      %h2 プロフィール
+      %p
+        = simple_format @user.profile
+
+  .user-info__right
+    .follow-list
+      %p 
+        ="Follow #{@user.followings.count}"
+      -@user.followings.each do |following|
+        .follow-list__flex
+          =render partial: 'follow_list', locals:{follow: following}
+    .follow-list
+      %p 
+        ="Follower #{@user.followers.count}"
+      -@user.followers.each do |follower|
+        .follow-list__flex
+          =render partial: 'follow_list', locals:{follow: follower}
+          
+.show-contents
+  =render 'posts/post'
     
   

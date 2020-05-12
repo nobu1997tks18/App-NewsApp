@@ -1,0 +1,6 @@
+.user-image
+  = image_tag follow.picture.url
+.user-name
+  =link_to "#{follow.name}", user_path(follow)
+.follow_unfollow_btn
+  =follow_unfollow?(follow)

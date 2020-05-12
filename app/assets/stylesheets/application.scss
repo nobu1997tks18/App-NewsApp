@@ -1,8 +1,11 @@
 @import 'reset';
+@import 'mixins/news_mixin';
+@import 'config/variable.scss';
 @import 'modules/total';
 @import 'modules/header';
-@import 'modules/side_bar';
+@import 'modules/footer';
 @import 'modules/form';
+@import 'modules/news_link_btn';
 @import 'users';
 @import 'news';
 @import 'posts';

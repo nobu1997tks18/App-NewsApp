@@ -1,29 +1,27 @@
 .news-contents{
-  height: 100%;
-  width: 75%;
-  background-color:black;
+  height: 100vh;
+  width: 100vw;
   padding-bottom: 100px;
   display: flex;
   flex-wrap: wrap ;
   justify-content: center;
-  position: fixed;
-  right: 0;
   overflow: scroll;
   h1{
-    width: calc(100vw - 370px);
-    color: white;
+    width: 100vw;
     font-size: 80px;
     font-weight: bold;
+    text-align: center;
+    padding: 30px;
   }
   .news-content{
     border: 1px solid black;
-    width: 250px;
+    width: 300px;
     &__image{
       height: 200px;
       color: rgba(0,0,0,0);
-      background-image: url('business.jpg');
+      background-image: url('top.jpg');
       img{
-        width: 250px;
+        width: 298px;
       }
     }
     &__title{
@@ -35,11 +33,10 @@
         font-weight: bold;
         color: black;
       }
-      background-color: white;
       padding: 5px;
     }
     &__link{
-      text-align: right;
+
       background-color: white;
       padding: 5px;
       a{
