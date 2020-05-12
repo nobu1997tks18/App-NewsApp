@@ -1,0 +1,5 @@
+.news-links{
+  display: flex;
+  width: 100vw;
+  @include news-link_btn;
+}

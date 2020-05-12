@@ -6,11 +6,12 @@ class UsersController < ApplicationController
   
   def index
     @user = current_user
-    @followings = @user.followings if @current_user
+    @posts = @user.feed if user_login?
   end
   
   def show
     @user = User.find(params[:id])
+    @posts = @user.posts
   end
   
   def new
@@ -53,16 +54,13 @@ class UsersController < ApplicationController
   def followings
     @user = User.find(params[:id])
     @users = @user.followings
-    render 'following_list'
+    render 'following'
   end
 
   def followers
     @user = User.find(params[:id])
     @users = @user.followers
-    render 'follower_list'
-  end
-
-  def about
+    render 'follower'
   end
 
   private

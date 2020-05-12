@@ -11,15 +11,14 @@ Rails.application.routes.draw do
       get :followings, :followers
     end
   end
-  get '/about', to: 'users#about'
+
   resources :relationships, only:[:create, :destroy]
-  resources :posts, only:[:new,:create, :destroy]
-  get 'news/topics'
+  resources :posts, only:[:new,:create,:destroy]
+  
   get 'news/bbc'
   get 'news/wsj'
   get 'news/yahoo'
   get 'news/nhk'
   get 'news/goal'
   get 'news/soccer_king'
-  
 end

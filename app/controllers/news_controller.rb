@@ -1,10 +1,5 @@
 class NewsController < ApplicationController
   before_action :check_login_user?
-  # _action :connecting_to_news_api
-  def topics   
-    @domein = "aaa"
-    connecting_to_news_api
-  end
 
   def bbc
     @domein = "bbc.co.uk"

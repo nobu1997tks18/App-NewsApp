@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :check_login_user?
+
   def new
     @post =Post.new
   end
@@ -10,7 +11,7 @@ class PostsController < ApplicationController
       flash[:success] = "投稿が完了しました"
       redirect_to root_path
     else
-      flash[:alert] = "内容を確認してください"
+      flash.now[:alert] = "内容を確認してください"
       render :new
     end
   end
