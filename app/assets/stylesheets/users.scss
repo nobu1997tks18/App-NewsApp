@@ -1,141 +1,115 @@
 .users-index{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  h2{
-    @include page-title;
-  }
-  .user-contents{
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    padding: 10px 50px;
-    .users-list{
-      width: 400px;
-      display: flex;
-      align-items: center;
-      &__image{
-        img{
-          margin-right: 10px;
-          height: 50px;
-          width: 50px;
-          border-radius: 50%;
-        }
-      }
-      &__name{
-        a{
-          width: 200px;
-          display: block;
-          color: black;
-          font-size: 15px;
-          line-height: 25px;
-          font-weight: bold;
-        }
-      }
-      &__btn{
-        .list-btn{
-          width: 130px;
-        }
-        @include follow-btn-color
-      }
-    }
-    .user-profile{
-      width: 350px;
-      word-wrap: break-word;
-    }
-  }
-}
-
-.user-info{
-  height: 50vh;
-  width: 100vw;
-  display: flex;
-  margin-top: 20px;
+  @include page-default-layout;
   &__left{
-    height: 50vh;
-    width: 25%;
-    padding-left: 30px;
-    text-align: center;
-    .user-picture{
-      img{
-        height: 250px;
-        width: 250px;
-        border-radius: 25px;
-      }
-    }
-    .user-name{
-      width: 100%;
-      font-size: 35px;
-      font-weight: bold;
-      text-align: center;
-    }
-    .list-btn{
-      display: block;
-      height: 40px;
-      width: 250px;
-      margin:  0 auto;
-    }
-    @include follow-btn-color
+    @include left-total-layout;
   }
   &__center{
-    width: 25%;
-    text-align: center;
-    .user-profile{
-      h2{
-        text-align: center;
-        font-size: 30px;
-        background:radial-gradient(lightgrey, white) ;
-        border-radius: 25px;
+    @include center-total-layout;
+    .user-contents{
+      
+      .contents-title{
+        @include center-contents-title;
       }
-      p{
-        padding: 5px 30px;
-        font-size: 15px;
-        text-align: left;
+      .user-content{
+        width: 80%;
+        margin: 0 auto;
+        padding: 10px;
+        border-bottom: 1px solid rgba(255,255,255,0.3);
         word-wrap: break-word;
+        .user-content-upper{
+          display: flex;
+          &__left{
+            img{
+              margin-right: 20px;
+              height: 50px;
+              width: 50px;
+              border-radius: 25px;
+            }
+          }
+          &__right{
+            display: flex;
+            align-items: center;
+            a{
+              font-size: 20px;
+              margin-right: 20px;
+            }
+            .user-name{
+              width: 400px;
+              text-align: left;
+            }
+            .follow-unfollow-btn{
+              @include follow-btn-color;
+              line-height: 15px;
+              font-size: 12px;
+              .list-btn{
+                width: 100px;
+              }
+            }
+          }
+        }
+        .user-content-bottom{
+          text-align: left;
+        }
       }
     }
   }
   &__right{
-    height: 50vh;
-    width: 50%;
-    display: flex;
-    .follow-list{
-      width: 50%;
-      margin-left: 15px;
-      overflow: scroll;
+    @include right-total-layout
+  }
+}
+
+
+.user-info{
+  @include page-default-layout;
+  &__left{
+    @include left-total-layout;
+  }
+  &__center{
+    @include center-total-layout;
+    .user-profile{
       display: flex;
-      flex-direction: column;
-      p{
-        text-align: center;
-        font-size: 30px;
-        background:radial-gradient(skyblue, white) ;
-        border-radius: 25px;
-      }
-      &__flex{
-        display: flex;
-        align-items: center;
-        .user-image{
+      padding: 20px 0 50px 0;
+      border-bottom: $border-color;
+      &__left{
+        width: 33%;
+        .user-picture{
           img{
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            border-radius: 25px;
           }
         }
         .user-name{
-          a{
-            display: block;
-            width: 200px;
-            line-height: 50px;
-            font-weight: bold;
-            color: black;
-            padding-left: 10px;
-          }
+          width: 100%;
+          font-size: 20px;
+          font-weight: bold;
+          padding: 10px;
         }
         .list-btn{
-          width: 80px;
-          font-size: 10px;
+          display: block;
+          height: 40px;
+          width: 150px;
+          margin: 0 auto;
         }
-        @include follow-btn-color
+        @include follow-btn-color;
+      }
+      &__right{
+        width: 67%;
+        height: 300px;
+        margin-right: 20px;
+        padding: 30px;
+        background-color: $partial-bg;
+        border-radius: $items-radius;
+        p{
+          font-size: 15px;
+          text-align: left;
+          word-wrap: break-word;
+        }
       }
     }
+  }
+
+  &__right{
+    @include right-total-layout;
   }
 }

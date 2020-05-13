@@ -1,12 +1,15 @@
 @import 'reset';
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
 @import 'mixins/mixin';
 @import 'config/variable.scss';
 @import 'modules/total';
-@import 'modules/header';
+@import 'modules/left_side-bar';
+@import 'modules/right_side-bar';
 @import 'modules/footer';
 @import 'modules/form';
-@import 'modules/news_link_btn';
 @import 'users';
 @import 'news';
 @import 'posts';
+@import 'likes';
 

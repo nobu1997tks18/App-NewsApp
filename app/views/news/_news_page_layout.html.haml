@@ -1,13 +1,16 @@
-=render 'shared/news_link_btn'
-.news-contents
-  .page-title
-    %h1
-      = yield(:page_title)
-  -@moments.each do |moment|
-    .news-content
-      .news-content__image
-        =image_tag src="#{moment['urlToImage']}", alt: 'リンク先の画像です', height: '200px', width: '300px'
-      .news-content__title
-        =link_to "#{moment['title']}","#{moment['url']}"
-      .news-content__link
-        =link_to "<#{moment['source']['name']}>","#{moment['url']}",target: :blank
+.news-index
+  .news-index__left
+    =render 'shared/left_side_bar',"@user": current_user
+  .news-index__center
+    .news-contents
+      .contents-title
+        %h1
+          = yield(:page_title)
+      -@moments.each do |moment|
+        .news-content
+          .news-content__image
+            =image_tag src="#{moment['urlToImage']}", alt: 'リンク先の画像です', height: '200px', width: '300px'
+          .news-content__title
+            =link_to "#{moment['title']}","#{moment['url']}"
+  .news-index__right  
+    =render 'shared/right_side_bar',"@user": current_user

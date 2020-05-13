@@ -1,11 +1,13 @@
 .input-page{
-  padding: 70px;
+  height: 100vh;
+  overflow: scroll;
+  background-color: $nomal-bg;
   .input-form{
-    background-color:(#eeeeee) ;
-    border-radius: 50px;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: $items-radius;
     width: 600px;
-    margin: 0 auto;
-    padding: 30px;
+    margin: 40px auto;
+    padding-bottom: 60px;
     &__title{
       @include page-title;
       width:100%;
@@ -22,11 +24,12 @@
       }
       .form{
         display: flex;
+        line-height: 30px;
         flex-direction: column;
-        line-height: 40px;
         vertical-align: middle;
         select{
           height: 40px;
+          width: 500px;
           padding: 10px;
         }
         textarea{
@@ -34,7 +37,7 @@
           width: 500px;
           resize: none;
         }
-        input{;
+        input{
           width: 500px;
         }
       }

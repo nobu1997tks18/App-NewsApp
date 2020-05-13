@@ -18,7 +18,7 @@ class User < ApplicationRecord
   validates :password, presence: true, length: {minimum: 8}, allow_nil: true
 
   def following?(other_user)
-    self.followings.include?(other_user)
+    followings.include?(other_user)
   end
 
   def follow(other_user)
@@ -26,11 +26,15 @@ class User < ApplicationRecord
   end
 
   def unfollow(other_user)
-    self.following_relationships.find_by(following_id: other_user.id).destroy
+    following_relationships.find_by(following_id: other_user.id).destroy
   end
 
   def feed
     following_ids = "SELECT following_id FROM relationships WHERE follower_id = :user_id"
     Post.where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: id)
+  end
+
+  def already_liked?(post)
+    likes.exists?(post_id: post.id)
   end
 end

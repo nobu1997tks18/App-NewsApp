@@ -1,0 +1,33 @@
+.follow-list{
+  background-color:$partial-bg;
+  height: $right-items-height;
+  width: $right-items-width;
+  border-radius: $items-radius;
+  margin:$right-items-margin;
+  text-align: center;
+  overflow: scroll;
+  h2{
+    @include items-title
+  }
+  &__flex{
+    display: flex;
+    align-items: center;
+    .user-image{
+      img{
+        @include user-list-image-size;
+      }
+    }
+    .user-name{
+      text-align: left;
+      overflow: hidden;
+      a{
+        @include user-list-font;
+      }
+    }
+    .list-btn{
+      width: 80px;
+      font-size: 10px;
+    }
+    @include follow-btn-color
+  }
+}

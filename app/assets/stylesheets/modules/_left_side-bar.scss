@@ -1,9 +1,29 @@
-.news-links{
-  display: flex;
-  width: 100vw;
-  @include news-link_btn;
+.links{
+  @include left-items-box;
+  &__title{
+    @include items-title;
+  }
+  &__options{
+    li{
+      a{
+        margin: 10px auto;
+        display: block;
+        width: 200px;
+        padding: 10px;
+        border:$border-color;
+        border-radius: $items-radius;
+      }
+    }
+  }
 }
 
+.news-links{
+  @include left-items-box;
+  @include news-link_btn;
+  &__title{
+    @include items-title
+  }
+}
 .news-box__bbc{
   height: 400px;
   display: none;

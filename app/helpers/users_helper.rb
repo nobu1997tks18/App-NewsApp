@@ -12,5 +12,4 @@ module UsersHelper
   def current_user_admin?
     current_user.admin? && !current_user?(@user) 
   end
-
 end

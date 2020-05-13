@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   def index
     @user = current_user
     @posts = @user.feed if user_login?
+    @like = Like.new
   end
 
   def new

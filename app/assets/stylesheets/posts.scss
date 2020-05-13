@@ -1,16 +1,15 @@
 .signup-page{
   &__top{
-    height: calc(100vh - 70px);
+    height: 100vh;
     width: 100vw;
     background-image: url(top.jpg);
     background-size: 100%;
     background-position:50% ;
     color: white;
-    padding-top: 70px;
     h1{
       font-size: 100px;
       font-weight: bold;
-      margin: 25px;
+      padding: 100px;
     }
     p{
       font-size: 25px;
@@ -40,18 +39,23 @@
   }
   &__center{
     height: 100%;
+    color:white;
+    background-color: $nomal-bg;
     h2{
       font-size: 40px;
       font-weight: bold;
       text-align: center;
       padding: 15px;
-      background: $greyTowhite;
     }
     .intro-contents{
       display: flex;
+      padding: 30px;
       &__content{ 
         width: 33%;
-        padding: 20px;
+        margin: 20px;   
+        padding-bottom: 20px;
+        background-color: $partial-bg;
+        border-radius: $items-radius;
         text-align: center;
         .intro-title{
           font-size:40px;
@@ -81,64 +85,66 @@
 }
 
 .user-posts{
-  width: 70%;
-  background-color: #eeeeee;
-  &__title{
-    @include page-title;
-    width: 100%;
-    text-align: left;;
-    background: $greyTowhite;
-  }
-  &__content{
-    display: flex;
-    padding: 10px 50px;
-    border-bottom: 1px solid white;
-    position: relative;
-    .user-image{
-      img{
-        height: 90px;
-        width: 90px;
-        border-radius: 10px;
+  height: 100vh;
+  width: 100%;
+  .user-post{
+    margin: 5px;
+    padding: 10px;
+    background-color: $partial-bg;
+    .user-post-upper{ 
+      display: flex;
+      &__left{
+        width: 15%;
+        img{
+          height: 60px;
+          width: 60px;
+          border-radius: 50%
+        }
       }
-    }
-    .content-flex{
-      margin-left: 15px;
-      .fixed-data{
-        display: flex;
-        &__name{
-          font-size: 20px;
-          font-weight: bold;
+      &__right{
+        width:85%;
+        text-align: left;
+        .post-right-top{
+          height: 40px;
+          line-height: 40px;
+          display: flex;
           a{
-            color: black;
+            font-size: 18px;
+            margin-right: 20px;
+          }
+          p{
+            font-size: 10px;
+            color: rgba(255,255,255,0.4);
           }
         }
-        &__right{
+        .post-right-bottom{
           display: flex;
-          flex-direction: column;
-          text-align: right;
           font-size: 15px;
-          color:grey ;
-          position: absolute;
-          right: 10px;
-          bottom: 0;
-          a{
-            color: black;
-          }
-        }
-      }
-      .posted-item{
-        a{
-          color: black;
-        }
-        .url{
-          display: flex;
           a{
             color: red;
           }
         }
-        .post{
-          width: 200px;
-          word-wrap: break-word;
+      }
+    }
+    .user-post-bottom{
+      .post-bottom-content{
+        width: 100%;
+        padding: 15px;
+        text-align: left;
+      }
+      .post-bottom-action{
+        display: flex;
+        .fa-trash-alt{
+          display: block;
+          font-size: 20px;
+        }
+        a{
+          margin-left: 200px;
+        }
+        button{
+          margin-left: 200px;
+          background-color: $partial-bg;
+          border: 0px;
         }
       }
     }

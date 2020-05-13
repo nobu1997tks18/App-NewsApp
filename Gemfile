@@ -44,6 +44,7 @@ gem 'pry-rails'
 gem 'news-api'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'font-awesome-sass'
 
 group :deployment, :production do
   gem 'fog'

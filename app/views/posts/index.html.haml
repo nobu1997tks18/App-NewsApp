@@ -1,8 +1,14 @@
 =provide(:page_title, "TOP")
 -if user_login?
-  .news-links
-    =render 'shared/news_link_btn'
-  =render 'posts/post'
+  .user-info
+    .user-info__left
+      =render 'shared/left_side_bar'
+    .user-info__center
+      .show-contents
+        =render 'posts/post'
+
+    .user-info__right
+      =render 'shared/right_side_bar'
 - else
   .signup-page
     .signup-page__top
@@ -20,9 +26,8 @@
           .intro-title
             %h3 国内外のニュースサイトへアクセス！ 
           .intro-info
-            %p BBC,WSJ,NHKなど、欧米、日本の主要ニュースサイトをピックアップ！広すぎず、狭すぎない、効果的なインプットを！
-          .intro-links
-            =render 'shared/news_link_btn' 
+            %p BBC、WSJ、NHKなど、世界の主要ニュースサイトをピックアップ！広すぎず、狭すぎない、効果的なインプットを！
+          .intro-images
         .intro-contents__content
           .intro-title
             %h3 投稿機能で気になるニュースをシェア
@@ -31,7 +36,7 @@
           .intro-images
         .intro-contents__content
           .intro-title
-            %h3 その他機能の紹介(随時アップデート中)
+            %h3 その他機能の紹介(随時アップデート)
           .intro-info
             %p フォロー機能
             %p いいね機能

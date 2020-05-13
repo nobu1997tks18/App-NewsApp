@@ -1,13 +1,23 @@
 .users-index
-  %h2 ユーザー一覧
-  -@users.each do |user|
+  .users-index__left
+    =render 'shared/left_side_bar', "@user": current_user
+  .users-index__center
     .user-contents
-      .users-list
-        .users-list__image
-          =image_tag user.picture.url
-        .users-list__name
-          =link_to "#{user.name}", user_path(user)
-        .users-list__btn
-          =follow_unfollow?(user)
-      .user-profile
-        = simple_format user.profile
+      .contents-title
+        %h2 All Users
+      -@users.each do |user|
+        .user-content
+          .user-content-upper
+            .user-content-upper__left
+              .user-image
+                =image_tag user.picture.url
+            .user-content-upper__right
+              .user-name
+                =link_to "#{user.name}", user_path(user)
+              .follow-unfollow-btn
+                =follow_unfollow?(user)
+          .user-content-bottom
+            = simple_format user.profile
+
+  .users-index__right
+    =render 'shared/right_side_bar', "@user": current_user

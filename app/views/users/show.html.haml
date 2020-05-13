@@ -1,37 +1,25 @@
-=provide(:page_title, "コメント一覧(#{@user.posts.count})")
-.news-links
-  =render 'shared/news_link_btn'
-
 .user-info
   .user-info__left
-    .user-picture
-      = image_tag @user.picture.url 
-    .user-name
-      = @user.name
-    .follow_unfollow_btn
-      =follow_unfollow?(@user)
-      
+    =render 'shared/left_side_bar'
   .user-info__center
     .user-profile
-      %h2 プロフィール
-      %p
-        = simple_format @user.profile
-
+      .user-profile__left
+        .user-picture
+          = image_tag @user.picture.url 
+        .user-name
+          = @user.name
+        .follow_unfollow_btn
+          =follow_unfollow?(@user)
+      .user-profile__right
+        %p
+          = simple_format @user.profile
+    .show-contents
+      =render 'posts/post'
   .user-info__right
-    .follow-list
-      %p 
-        ="Follow #{@user.followings.count}"
-      -@user.followings.each do |following|
-        .follow-list__flex
-          =render partial: 'follow_list', locals:{follow: following}
-    .follow-list
-      %p 
-        ="Follower #{@user.followers.count}"
-      -@user.followers.each do |follower|
-        .follow-list__flex
-          =render partial: 'follow_list', locals:{follow: follower}
-          
-.show-contents
-  =render 'posts/post'
+    =render 'shared/right_side_bar'
+
+
+-# .show-likelist
+-#   =render 'posts/liked_post'
     
   

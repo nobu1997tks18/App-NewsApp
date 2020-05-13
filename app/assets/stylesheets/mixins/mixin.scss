@@ -1,9 +1,6 @@
 @mixin news_link_btn{
   .bbc{
     background-color: red;
-    a{
-      color: white;
-    }
   }
   .wsj{
     background-color: white;
@@ -21,15 +18,9 @@
   }
   .nhk{
     background-color: skyblue;
-    a{
-      color: white;
-    }
   }
   .goal{
     background-color: navy;
-    a{
-      color: white;
-    }
   }
   .soccer-king{
     background-color: yellow;
@@ -38,10 +29,10 @@
     }
   }
   .news-link-btn{
-    margin:10px auto;
+    margin: 20px auto;
     height: 50px;
-    width: 300px;
-    border-radius: 5%;
+    width: 200px;
+    border-radius: $items-radius;
     line-height: 50px;
     text-align: center;
     a{
@@ -65,8 +56,9 @@
 
 @mixin follow-btn-color{
   .list-btn{
+    display: block;
     color: white;
-    padding: 5px;
+    padding:5px 10px;
     border-radius: 25px;
 
   }
@@ -77,3 +69,87 @@
     background-color: grey;
   }
 }
+
+@mixin like-btn{
+  .like-display{
+    display: flex;
+    line-height:20px;
+    text-align: center;
+    button{
+      font-size: 20px;
+      line-height: 20px;
+      border: 0px;
+      margin-left: 200px;
+      appearance: none;
+      outline: none;
+    }
+    .unlike-btn{
+      color: red;
+    }
+  }
+}
+
+@mixin user-list-image-size{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+@mixin user-list-font{
+  display: block;
+  width: 150px;
+  line-height: 50px;
+  padding-left: 10px;
+}
+
+@mixin items-title{
+  font-size: 20px;
+  padding: 10px;
+  border-bottom: $border-color;
+}
+
+@mixin page-default-layout{
+  display: flex;
+  background-color: $nomal-bg;
+  color: white;
+  padding-top: 50px;
+}
+
+@mixin left-total-layout{
+  width: 25%;
+  padding-left: 30px;
+  flex-direction: column;
+  text-align: center;
+  border-top: $border-color;
+}
+
+@mixin left-items-box{
+  width: $left-items-width;
+  border-radius: $items-radius;
+  margin: $left-items-margin;
+  padding-bottom: 10px;
+  background-color: $partial-bg;
+}
+
+@mixin right-total-layout{
+  width: 25%;
+  border-top: $border-color;
+}
+
+
+@mixin center-total-layout{
+  height: 200vh;
+  width: 50%;
+  background-color: $nomal-bg;
+  border-top: $border-color;
+  border-right: $border-color;
+  border-left: $border-color;
+  text-align: center;
+  overflow: scroll;
+}
+
+  @mixin center-contents-title{
+    font-size: 50px;
+    padding: 20px;
+    border-bottom:$border-color ;
+  }

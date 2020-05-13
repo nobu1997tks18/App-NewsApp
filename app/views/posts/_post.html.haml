@@ -1,23 +1,23 @@
 .user-posts
-  .user-posts__title
-    %h2
-      =yield(:page_title)
   -@posts.each do |post|
-    .user-posts__content
-      .user-image
-        = image_tag post.user.picture.url
-      .content-flex
-        .fixed-data
-          .fixed-data__name
+    .user-post
+      .user-post-upper
+        .user-post-upper__left
+          = image_tag post.user.picture.url
+        .user-post-upper__right
+          .post-right-top
             =link_to "#{post.user.name}", user_path(post.user)
-          .fixed-data__right
-            =post.created_at
-            =link_to "Delete", post_path(post), {method: :delete}
-        .posted-item
-          .url
+            =link_to "Genre：#{post.genre}","#"
+            %p
+              =post.created_at
+          .post-right-bottom
             %p URL：
             =link_to "#{post.url}", post.url, target: :blank
-          .genre
-            =link_to "ジャンル：#{post.genre}","#"
-          .post
-            =simple_format(post.content)
+      .user-post-bottom
+        .post-bottom-content
+          =simple_format(post.content)   
+        .post-bottom-action
+          =render partial: 'likes/like_btn',locals:{post: post}
+          -if post.user == current_user
+            =link_to post_path(post,:id), {method: :delete} do
+              .far.fa-trash-alt
