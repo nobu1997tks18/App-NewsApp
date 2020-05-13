@@ -54,3 +54,26 @@
     }
   }
 }
+
+@mixin page-title{
+  width: 100vw;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+}
+
+@mixin follow-btn-color{
+  .list-btn{
+    color: white;
+    padding: 5px;
+    border-radius: 25px;
+
+  }
+  .follow-btn{
+    background-color: skyblue;
+  }
+  .unfollow-btn{
+    background-color: grey;
+  }
+}

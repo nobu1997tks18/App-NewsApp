@@ -7,11 +7,7 @@
   justify-content: center;
   overflow: scroll;
   h1{
-    width: 100vw;
-    font-size: 80px;
-    font-weight: bold;
-    text-align: center;
-    padding: 30px;
+    @include page-title
   }
   .news-content{
     border: 1px solid black;

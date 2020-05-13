@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'users#index'
+  root 'posts#index'
   
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :relationships, only:[:create, :destroy]
-  resources :posts, only:[:new,:create,:destroy]
+  resources :posts, only:[:index,:new,:create,:destroy]
   
   get 'news/bbc'
   get 'news/wsj'

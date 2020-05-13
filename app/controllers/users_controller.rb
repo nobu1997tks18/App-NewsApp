@@ -5,8 +5,7 @@ class UsersController < ApplicationController
   before_action :check_admin_or_current_user?,  only:[:destroy]
   
   def index
-    @user = current_user
-    @posts = @user.feed if user_login?
+    @users = User.all
   end
   
   def show

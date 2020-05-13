@@ -1,0 +1,39 @@
+=provide(:page_title, "TOP")
+-if user_login?
+  .news-links
+    =render 'shared/news_link_btn'
+  =render 'posts/post'
+- else
+  .signup-page
+    .signup-page__top
+      %h1 Output your reviews
+      %p ニュースの学びにアウトプットを
+      .top-links
+        =link_to "ユーザ登録", new_user_path
+        =link_to "ログイン", login_path
+        =link_to "お試しログイン", easy_login_path, method: :post
+
+    .signup-page__center
+      %h2 What you can do on this web site?
+      .intro-contents
+        .intro-contents__content
+          .intro-title
+            %h3 国内外のニュースサイトへアクセス！ 
+          .intro-info
+            %p BBC,WSJ,NHKなど、欧米、日本の主要ニュースサイトをピックアップ！広すぎず、狭すぎない、効果的なインプットを！
+          .intro-links
+            =render 'shared/news_link_btn' 
+        .intro-contents__content
+          .intro-title
+            %h3 投稿機能で気になるニュースをシェア
+          .intro-info
+            %p ジャンル、URLとともにニュースをシェア。自分の意見を添えて、ニュースに関する考えをアウトプットしましょう！
+          .intro-images
+        .intro-contents__content
+          .intro-title
+            %h3 その他機能の紹介(随時アップデート中)
+          .intro-info
+            %p フォロー機能
+            %p いいね機能
+            %p 投稿へのコメント機能
+          .intro-images

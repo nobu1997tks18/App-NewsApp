@@ -1,5 +1,9 @@
 class PostsController < ApplicationController
-  before_action :check_login_user?
+  before_action :check_login_user?,except: :index
+  def index
+    @user = current_user
+    @posts = @user.feed if user_login?
+  end
 
   def new
     @post =Post.new
