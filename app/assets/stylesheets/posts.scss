@@ -84,9 +84,17 @@
   width: 100vw;
   background-color: #eeeeee;
   &__title{
+<<<<<<< HEAD
     @include page-title;
     text-align: left;;
     background: $greyTowhite;
+=======
+    width: 100vw;
+    background: $greyTowhite;
+    font-size: 50px;
+    font-weight: bold;
+    padding-left:30px;
+>>>>>>> 88427ec715daa1d145e464d5becc541380137a90
   }
   &__content{
     display: flex;
