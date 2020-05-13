@@ -10,8 +10,9 @@
         .fixed-data
           .fixed-data__name
             =link_to "#{post.user.name}", user_path(post.user)
-          .fixed-data__date
+          .fixed-data__right
             =post.created_at
+            =link_to "Delete", post_path(post), {method: :delete}
         .posted-item
           .url
             %p URL：

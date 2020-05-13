@@ -13,7 +13,9 @@ Rails.application.routes.draw do
   end
 
   resources :relationships, only:[:create, :destroy]
-  resources :posts, only:[:index,:new,:create,:destroy]
+  resources :posts, only:[:index,:new,:create,:destroy] do
+    resources :likes, only:[:create, :destroy]
+  end
   
   get 'news/bbc'
   get 'news/wsj'
