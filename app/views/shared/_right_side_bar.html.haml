@@ -4,11 +4,11 @@
       ="Follow #{@user.followings.count}"
   -@user.followings.each do |following|
     .follow-list__flex
-      =render partial: 'shared/follow_list', locals:{follow: following}
+      = render 'shared/users_list',{listed_user: following}
 .follow-list
   .follow-list__title
     %h2
       ="Follower #{@user.followers.count}"
   -@user.followers.each do |follower|
     .follow-list__flex
-      =render partial: 'shared/follow_list', locals:{follow: follower}
+      = render 'shared/users_list',{listed_user: follower}

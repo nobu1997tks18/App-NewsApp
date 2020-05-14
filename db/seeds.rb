@@ -25,10 +25,10 @@ User.create(
   )
 end
 
-users = User.all
-user = users.first
-followings = users[2..50]
-followers = users[12..70]
-followings.each {|following| user.follow(following)}
-followers.each {|follower| follower.follow(user)}
+# users = User.all
+# user = users.first
+# followings = users[2..50]
+# followers = users[12..70]
+# followings.each {|following| user.follow(following)}
+# followers.each {|follower| follower.follow(user)}
 

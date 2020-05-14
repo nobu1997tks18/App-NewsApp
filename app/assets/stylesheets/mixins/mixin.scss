@@ -48,6 +48,7 @@
 
 @mixin page-title{
   width: 100vw;
+  color: white;
   font-size: 60px;
   font-weight: bold;
   text-align: center;
@@ -131,19 +132,13 @@
   background-color: $partial-bg;
 }
 
-@mixin right-total-layout{
-  width: 25%;
-  border-top: $border-color;
-}
 
 
 @mixin center-total-layout{
   height: 200vh;
   width: 50%;
   background-color: $nomal-bg;
-  border-top: $border-color;
-  border-right: $border-color;
-  border-left: $border-color;
+  border: $border-color;
   text-align: center;
   overflow: scroll;
 }
@@ -152,4 +147,19 @@
     font-size: 50px;
     padding: 20px;
     border-bottom:$border-color ;
+  }
+
+  @mixin right-total-layout{
+    width: 25%;
+    border-top: $border-color;
+  }
+  
+  @mixin right-items-box{
+    background-color:$partial-bg;
+    height: $right-items-height;
+    width: $right-items-width;
+    border-radius: $items-radius;
+    margin:$right-items-margin;
+    text-align: center;
+    overflow: scroll;
   }

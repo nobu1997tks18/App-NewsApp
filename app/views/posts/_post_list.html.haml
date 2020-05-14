@@ -1,0 +1,23 @@
+.user-post
+  .user-post-upper
+    .user-post-upper__left
+      = image_tag post.user.picture.url
+    .user-post-upper__right
+      .post-right-top
+        =link_to "#{post.user.name}", user_path(post.user)
+        =link_to "Genre：#{post.genre}","#"
+        %p
+          =post.created_at
+      .post-right-bottom
+        %p URL：
+        =link_to "#{post.url}", post.url, target: :blank
+  .user-post-bottom
+    .post-bottom-content
+      =simple_format(post.content)   
+    .post-bottom-action
+      =link_to  post_path(post) do
+        .far.fa-comment-dots
+      =render partial: 'likes/like_btn',locals:{post: post}
+      -# -if post.user == current_user
+        -#   =link_to post_path(post,:id), {method: :delete} do
+        -#     .far.fa-trash-alt

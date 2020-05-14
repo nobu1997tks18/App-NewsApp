@@ -15,7 +15,7 @@
               .user-name
                 =link_to "#{user.name}", user_path(user)
               .follow-unfollow-btn
-                =follow_unfollow?(user)
+                =follow_or_unfollow_btn?(user)
           .user-content-bottom
             = simple_format user.profile
 

@@ -1,0 +1,11 @@
+.posts-show
+  .posts-show__left
+    =render 'shared/left_side_bar'
+  .posts-show__center
+    .user-posts
+      =render 'posts/post_list',{post: @post}
+    =@post.content
+    =@post.genre
+    =@post.url
+  .posts-show__right
+    =render 'likes/right_side_bar_likes',locals:{ post: @post}

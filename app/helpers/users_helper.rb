@@ -1,10 +1,10 @@
 module UsersHelper
-  def follow_unfollow?(user)
+  def follow_or_unfollow_btn?(user)
     unless current_user?(user)
       if @current_user.following?(user)
-        render partial: 'shared/btn_unfollow', locals:{ "@user": user}
+        render partial: 'relationships/btn_unfollow',locals:{ follower: user }
       else
-        render partial: 'shared/btn_follow', locals:{ "@user": user}
+        render partial: 'relationships/btn_follow',locals:{ unfollower: user }
       end
     end
   end

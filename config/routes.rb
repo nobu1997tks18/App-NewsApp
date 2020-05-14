@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :relationships, only:[:create, :destroy]
-  resources :posts, only:[:index,:new,:create,:destroy] do
+  resources :posts, only:[:index,:show,:new,:create,:destroy] do
     resources :likes, only:[:create, :destroy]
   end
   

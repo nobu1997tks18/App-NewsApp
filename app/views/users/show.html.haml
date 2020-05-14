@@ -9,17 +9,14 @@
         .user-name
           = @user.name
         .follow_unfollow_btn
-          =follow_unfollow?(@user)
+          =follow_or_unfollow_btn?(@user)
       .user-profile__right
         %p
           = simple_format @user.profile
     .show-contents
-      =render 'posts/post'
+      .user-posts
+        -@posts.each do |post|
+          =render 'posts/post_list',{post: post}
   .user-info__right
-    =render 'shared/right_side_bar'
-
-
--# .show-likelist
--#   =render 'posts/liked_post'
-    
+    =render 'shared/right_side_bar' 
   

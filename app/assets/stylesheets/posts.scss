@@ -150,3 +150,16 @@
     }
   }
 }
+
+.posts-show{
+  @include page-default-layout;
+  &__left{
+    @include left-total-layout;
+  }
+  &__center{
+    @include center-total-layout;
+  }
+  &__right{
+    @include right-total-layout
+  }
+}

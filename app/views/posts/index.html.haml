@@ -5,7 +5,9 @@
       =render 'shared/left_side_bar'
     .user-info__center
       .show-contents
-        =render 'posts/post'
+        .user-posts
+          -@posts.each do |post|
+            =render 'posts/post_list',{post: post}
 
     .user-info__right
       =render 'shared/right_side_bar'
