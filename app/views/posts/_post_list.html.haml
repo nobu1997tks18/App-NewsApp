@@ -17,7 +17,8 @@
     .post-bottom-action
       =link_to  post_path(post) do
         .far.fa-comment-dots
+        ="#{post.comments.count}"
       =render partial: 'likes/like_btn',locals:{post: post}
-      -# -if post.user == current_user
-        -#   =link_to post_path(post,:id), {method: :delete} do
-        -#     .far.fa-trash-alt
+    -# -if post.user == current_user
+    -#   =link_to post_path(post,:id), {method: :delete} do
+    -#     .far.fa-trash-alt

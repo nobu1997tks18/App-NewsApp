@@ -111,7 +111,7 @@
 
 @mixin page-default-layout{
   display: flex;
-  background-color: $nomal-bg;
+  background-color: $normal-bg;
   color: white;
   padding-top: 50px;
 }
@@ -135,9 +135,9 @@
 
 
 @mixin center-total-layout{
-  height: 200vh;
+  height: 150vh;
   width: 50%;
-  background-color: $nomal-bg;
+  background-color: $normal-bg;
   border: $border-color;
   text-align: center;
   overflow: scroll;

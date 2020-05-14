@@ -2,10 +2,16 @@
   .posts-show__left
     =render 'shared/left_side_bar'
   .posts-show__center
+    .comment-form
+      =render template: "comments/new", locals:{post: @post, user: current_user}
     .user-posts
       =render 'posts/post_list',{post: @post}
-    =@post.content
-    =@post.genre
-    =@post.url
+    .user-reply
+      .user-reply__title
+        %h2
+          Reply
+        -@post.comments.each do |comment|
+          =render 'comments/comments_list',{comment: comment}
+        
   .posts-show__right
     =render 'likes/right_side_bar_likes',locals:{ post: @post}

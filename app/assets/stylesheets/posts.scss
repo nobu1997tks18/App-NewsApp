@@ -40,7 +40,7 @@
   &__center{
     height: 100%;
     color:white;
-    background-color: $nomal-bg;
+    background-color: $normal-bg;
     h2{
       font-size: 40px;
       font-weight: bold;
@@ -85,7 +85,6 @@
 }
 
 .user-posts{
-  height: 100vh;
   width: 100%;
   .user-post{
     margin: 5px;
@@ -158,6 +157,41 @@
   }
   &__center{
     @include center-total-layout;
+    .comment-form{
+      width: 80%;
+      padding: 20px;
+      margin: 0 auto;
+      position: relative;
+      textarea{
+        height: 150px;
+        width: 100%;
+        padding: 20px;
+        font-size: 20px;
+        outline: none;
+        resize: none;
+        border: 0px;
+        background-color: #eeeeee;
+        border-radius: $items-radius;
+      }
+      .comment-btn{
+        font-size: 30px;
+        border: 0px;
+        outline: none;
+        background-color: #eeeeee;
+        position: absolute;
+        right: 50px;
+        bottom: 45px;
+      }
+    }
+    .user-reply{
+      &__title{
+        h2{
+          @include items-title;
+          font-size: 40px;
+          border-top: $border-color;
+        }
+      }
+    }
   }
   &__right{
     @include right-total-layout

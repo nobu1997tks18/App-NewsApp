@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.create(params_post)
     if @post.save
-      flash[:success] = "投稿が完了しました"
+      flash[:succsess] = "投稿が完了しました"
       redirect_to root_path
     else
       flash.now[:alert] = "内容を確認してください"

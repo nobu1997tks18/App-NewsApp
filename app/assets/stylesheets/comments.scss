@@ -1,0 +1,43 @@
+.comments-for-post{
+  width: 100%;
+  .comment-for-post{
+    margin: 5px;
+    padding: 10px;
+    background-color: $partial-bg;
+  }
+  .comment-upper{
+    display: flex;
+    &__left{
+      width: 15%;
+      img{
+        height: 60px;
+        width: 60px;
+        border-radius: 50%
+      }
+    }
+    &__right{
+      width:85%;
+      text-align: left;
+      .upper-right-top{
+        height: 40px;
+        line-height: 40px;
+        display: flex;
+        a{
+          font-size: 18px;
+          margin-right: 20px;
+        }
+        p{
+          font-size: 10px;
+          color: rgba(255,255,255,0.4);
+        }
+      }
+    }
+  }
+  .comment-bottom{
+    .comment-bottom-content{
+      width: 100%;
+      padding: 15px;
+      text-align: left;
+    }
+  }
+}

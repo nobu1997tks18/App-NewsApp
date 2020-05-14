@@ -1,0 +1,13 @@
+.comments-for-post
+  .comment-for-post
+    .comment-upper
+      .comment-upper__left
+        = image_tag comment.user.picture.url
+      .comment-upper__right
+        .upper-right-top
+          =link_to "#{comment.user.name}", user_path(comment.user)
+          %p
+            =comment.created_at
+    .comment-bottom
+      .comment-bottom-content
+        =simple_format(comment.content)   
