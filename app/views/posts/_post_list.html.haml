@@ -5,12 +5,16 @@
     .user-post-upper__right
       .post-right-top
         =link_to "#{post.user.name}", user_path(post.user)
-        =link_to "Genre：#{post.genre}","#"
         %p
           =post.created_at
       .post-right-bottom
-        %p URL：
-        =link_to "#{post.url}", post.url, target: :blank
+        .post-bottom-item
+          %p Genre：
+          -post.genres.each do |genre|
+            =link_to "#{genre.name}/",genre_path(genre)
+        .post-bottom-item
+          %p URL：
+          =link_to "#{post.url}", post.url, target: :blank
   .user-post-bottom
     .post-bottom-content
       =simple_format(post.content)   

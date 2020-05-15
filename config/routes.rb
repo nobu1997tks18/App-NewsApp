@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :relationships, only:[:create, :destroy]
+  resources :genres, only: :show
   resources :posts, only:[:index,:show,:new,:create,:destroy] do
     resources :comments, only:[:new, :create, :destroy]
     resources :likes, only:[:create, :destroy]

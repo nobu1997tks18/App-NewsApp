@@ -13,7 +13,6 @@
       width:100%;
     }
     &__template{
-      width:500px;
       color: white;
       padding-top: 20px;
       margin: 0 auto 50px auto;
@@ -26,34 +25,39 @@
       }
       .form{
         display: flex;
+        width: 100%;
         padding: 10px;
         line-height: 30px;
         flex-direction: column;
         vertical-align: middle;
         font-size: 20px;
-        select{
-          height: 40px;
-          width: 500px;
-          padding: 10px;
+        .form-checkbox{
+          margin-bottom: 15px;
+        }
+        input{
+          width: 20px;
         }
         textarea{
           height: 200px;
-          width: 500px;
+          width: 100%;
           resize: none;
         }
-        input{
-          width: 500px;
+        .text-field{
+          width: 100%;
+        }
+        #post_url{
+          width: 100%;
         }
       }
       .form-picture{
         .file-field{
-          width: 500px;
+          width: 100%;
           background-color: white;
         }
       }
       .form-submit{
         input{
-          width: 500px;
+          width: 100%;
           margin-top: 20px;
           background-color: grey;
           color: white;

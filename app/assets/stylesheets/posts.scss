@@ -117,10 +117,10 @@
           }
         }
         .post-right-bottom{
-          display: flex;
           font-size: 15px;
-          a{
-            color: red;
+          .post-bottom-item{
+            display: flex;
+            margin-bottom:5px ;
           }
         }
       }

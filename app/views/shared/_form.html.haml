@@ -9,16 +9,16 @@
           = render 'shared/user_errors_messages'
           .form.form-name
             =f.label :name
-            =f.text_field :name
+            =f.text_field :name,class:"text-field"
           .form.form-email
             =f.label :email
-            =f.email_field :email
+            =f.email_field :email,class:"text-field"
           .form.form-password
             =f.label :password
-            =f.password_field :password,placeholder: "８文字以上"
+            =f.password_field :password,placeholder: "８文字以上",class:"text-field"
           .form.form-comfirmation
             =f.label :password_confirmation
-            =f.password_field :password_confirmation
+            =f.password_field :password_confirmation,class:"text-field"
           .form.form-profile
             =f.label :profile
             =f.text_area :profile ,placeholder: "プロフィールを記入してください"

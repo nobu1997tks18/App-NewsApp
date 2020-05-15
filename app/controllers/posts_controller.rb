@@ -13,6 +13,7 @@ class PostsController < ApplicationController
 
   def new
     @post =Post.new
+    @genres = Genre.all
   end
 
   def create
@@ -34,6 +35,6 @@ class PostsController < ApplicationController
 
   private
     def params_post
-      params.require(:post).permit(:genre,:content, :url).merge(user_id: current_user.id)
+      params.require(:post).permit(:content, :url, genre_ids:[]).merge(user_id: current_user.id)
     end
 end

@@ -25,6 +25,7 @@ User.create(
   )
 end
 
+%w[経済 ビジネス 政治 マネー スポーツ 海外 その他].each {|genre| Genre.create(name: genre)}
 # users = User.all
 # user = users.first
 # followings = users[2..50]

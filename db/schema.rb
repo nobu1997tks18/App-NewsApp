@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_14_135414) do
+ActiveRecord::Schema.define(version: 2020_05_15_045012) do
 
   create_table "comments", force: :cascade do |t|
     t.text "content"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 2020_05_14_135414) do
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_genres_on_genre"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -37,9 +44,27 @@ ActiveRecord::Schema.define(version: 2020_05_14_135414) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "genre"
+    # t.string "genre"
     t.index ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  # create_table "posts_genres", force: :cascade do |t|
+  #   t.integer "post_id"
+  #   t.integer "genre_id"
+  #   t.datetime "created_at", null: false
+  #   t.datetime "updated_at", null: false
+  #   t.index ["genre_id"], name: "index_posts_genres_on_genre_id"
+  #   t.index ["post_id"], name: "index_posts_genres_on_post_id"
+  # end
+
+  create_table "posts_genres_relationships", force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "genre_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["genre_id"], name: "index_posts_genres_relationships_on_genre_id"
+    t.index ["post_id"], name: "index_posts_genres_relationships_on_post_id"
   end
 
   create_table "relationships", force: :cascade do |t|
