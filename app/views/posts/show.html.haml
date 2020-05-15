@@ -1,17 +1,18 @@
-.posts-show
-  .posts-show__left
+.user-info
+  .user-info__left
     =render 'shared/left_side_bar'
-  .posts-show__center
-    .comment-form
-      =render template: "comments/new", locals:{post: @post, user: current_user}
-    .user-posts
-      =render 'posts/post_list',{post: @post}
-    .user-reply
-      .user-reply__title
-        %h2
-          Reply
+  .user-info__center
+    .show-contents
+      .comment-form
+        =render template: "comments/new", locals:{post: @post, user: current_user}
+      .user-posts
+        =render 'posts/post_list',{post: @post}
+      .user-reply
+        .user-reply__title
+          %h2
+            Reply
         -@post.comments.each do |comment|
           =render 'comments/comments_list',{comment: comment}
         
-  .posts-show__right
+  .user-info__right
     =render 'likes/right_side_bar_likes',locals:{ post: @post}

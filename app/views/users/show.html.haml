@@ -2,6 +2,9 @@
   .user-info__left
     =render 'shared/left_side_bar'
   .user-info__center
+    .show-contents__title
+      %h2
+        =@user.name
     .user-profile
       .user-profile__left
         .user-picture

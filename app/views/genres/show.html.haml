@@ -1,0 +1,13 @@
+.user-info
+  .user-info__left
+    =render 'shared/left_side_bar'
+  .user-info__center
+    .show-contents
+      .show-contents__title
+        %h2
+          =@genre.name
+      .user-posts
+        -@relationships.each do |relationship|
+          =render 'posts/post_list',{post: relationship.post}
+  .user-info__right
+    =render 'shared/right_side_bar', {"@user": current_user}
