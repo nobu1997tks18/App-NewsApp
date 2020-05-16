@@ -22,4 +22,5 @@
       =link_to  post_path(post) do
         .far.fa-comment-dots
         ="#{post.comments.count}"
-      =render partial: 'likes/like_btn',locals:{post: post}
+      %div{id:"like-btn-#{post.id}"}
+        =render partial: 'likes/like_btn',locals:{post: post}

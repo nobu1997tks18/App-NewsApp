@@ -1,6 +1,6 @@
 .like-display
   -if current_user.already_liked?(post)
-    = form_with url: post_like_path(post, :id),method: :delete, remote: true do |f|
+    = form_with url: post_like_path(post, :id), method: :delete, remote: true do |f|
       = hidden_field_tag :user_id, current_user.id
       = button_tag type: 'submit' , class:"unlike-btn"  do
         = icon("fa", "heart")

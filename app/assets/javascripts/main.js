@@ -8,3 +8,4 @@ $(function() {
   }
   tabs.click(tabSwitch);    
 });
+

@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @posts = @user.posts
     @like = Like.new
+    @likes = @user.likes
   end
   
   def new

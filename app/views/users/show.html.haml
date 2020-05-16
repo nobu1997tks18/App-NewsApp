@@ -18,17 +18,21 @@
           = simple_format @user.profile
     .menu-items
       .menu-item.active
-        = link_to "ユーザー投稿","#"
+        %div 
+          %p
+            ユーザー投稿
       .menu-item
-        = link_to "いいね一覧","#"          
+        %div
+          %p
+            いいね一覧          
     .show-contents.show
       .user-posts
         -@posts.each do |post|
           =render 'posts/post_list',{post: post}
     .show-contents
       .user-posts
-        -@posts.each do |post|
-          =render 'posts/post_list',{post: post}
+        -@likes.each do |like|
+          =render 'posts/post_list',{post: like.post}
   .user-info__right
     =render 'shared/right_side_bar' 
   
