@@ -3,7 +3,6 @@ class LikesController < ApplicationController
     @like = current_user.likes.create(post_id: params[:post_id])
     @likes = current_user.likes
     @post = Post.find(params[:post_id])
-    
   end
   
   def destroy

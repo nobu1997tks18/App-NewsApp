@@ -1,0 +1,8 @@
+-unless current_user?(user)
+  -if @current_user.following?(user)
+    =form_with model: @current_user.following_relationships.find_by(following_id: user.id), method: :delete, remote: true do |f|
+      = f.submit "フォロー中", class: "unfollow-btn list-btn"
+  -else
+    = form_with scope: :relationship, url: relationships_path(user), remote: true  do |f|
+      = hidden_field_tag :following_id, user.id
+      = f.submit "フォローする", class: "follow-btn list-btn"

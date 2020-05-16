@@ -15,7 +15,8 @@
               .user-name
                 =link_to "#{user.name}", user_path(user)
               .follow-unfollow-btn
-                =follow_or_unfollow_btn?(user)
+                %div{id:"follow_btn_#{user.id}"}
+                  =render 'relationships/follow_btn',{ user: user}
           .user-content-bottom
             = simple_format user.profile
 

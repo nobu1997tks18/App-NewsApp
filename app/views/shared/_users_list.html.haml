@@ -3,4 +3,5 @@
 .user-name
   =link_to "#{listed_user.name}", user_path(listed_user)
 .follow_unfollow_btn
-  =follow_or_unfollow_btn?(listed_user)
+  %div{id:"follow_btn_#{listed_user.id}"}
+    =render 'relationships/follow_btn',{ user: listed_user}

@@ -1,3 +1,0 @@
-= form_with scope: :relationship, url: relationships_path(@user)  do |f|
-  = hidden_field_tag :following_id, unfollower.id
-  = f.submit "フォローする", class: "follow-btn list-btn"

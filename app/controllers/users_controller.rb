@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   before_action :check_admin_or_current_user?,  only:[:destroy]
   
   def index
-    @users = User.all
+    @users = User.all.includes(:posts, :followings ,:followers, :following_relationships, :follower_relationships)
   end
   
   def show

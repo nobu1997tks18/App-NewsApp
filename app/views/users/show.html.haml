@@ -12,7 +12,8 @@
         .user-name
           = @user.name
         .follow_unfollow_btn
-          =follow_or_unfollow_btn?(@user)
+          %div{id:"follow_btn_#{@user.id}"}
+            =render 'relationships/follow_btn',{ user: @user}
       .user-profile__right
         %p
           = simple_format @user.profile
