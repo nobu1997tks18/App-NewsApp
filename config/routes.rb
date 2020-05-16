@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'genres/show'
   root 'posts#index'
   
   get '/login', to: 'sessions#new'

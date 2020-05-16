@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_secure_password
 
-
+  default_scope -> {order(name: :asc)} 
   validates :name, presence: true, length: {maximum:25}
   Email_Regex = /\A[\w\-.]+@\w*.(?!.*?\.\.)(\.[\w\.]+)\z/
   validates :email, presence: true,length: {maximum:100},format:{with: Email_Regex},uniqueness:{case_sensitive: false}

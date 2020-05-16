@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   before_action :check_login_user?,except: :index
   def index
     @user = current_user
-    @other_user = 
     @posts = @user.feed if user_login?
     @like = Like.new
   end

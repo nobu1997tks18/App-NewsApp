@@ -16,8 +16,27 @@
         =link_to @current_user.name, user_path(@current_user)
       %li
         =link_to "Logout", logout_path,{method: :delete}
-        
 
+.links
+  .links__title
+    %h2 Genres
+  .links__options
+    %ul.options-list
+      %li
+        =link_to "経済", genre_path(1)
+      %li
+        =link_to "ビジネス", genre_path(2)
+      %li
+        =link_to "政治", genre_path(3)
+      %li
+        =link_to "マネー", genre_path(4)
+      %li
+        =link_to "スポーツ", genre_path(5)
+      %li
+        =link_to "海外", genre_path(5)
+      %li
+        =link_to "その他", genre_path(6)
+        
 .news-links
   .news-links__title
     %h2  News Links

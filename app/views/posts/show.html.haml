@@ -2,7 +2,7 @@
   .user-info__left
     =render 'shared/left_side_bar'
   .user-info__center
-    .show-contents
+    .show-contents.show
       .comment-form
         =render template: "comments/new", locals:{post: @post, user: current_user}
       .user-posts

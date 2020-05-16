@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 2020_05_15_045012) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_genres_on_genre"
   end
 
   create_table "likes", force: :cascade do |t|

@@ -16,6 +16,15 @@
       .user-profile__right
         %p
           = simple_format @user.profile
+    .menu-items
+      .menu-item.active
+        = link_to "ユーザー投稿","#"
+      .menu-item
+        = link_to "いいね一覧","#"          
+    .show-contents.show
+      .user-posts
+        -@posts.each do |post|
+          =render 'posts/post_list',{post: post}
     .show-contents
       .user-posts
         -@posts.each do |post|
