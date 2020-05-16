@@ -1,15 +1,15 @@
 .like-display
   -if current_user.already_liked?(post)
-    = form_with url: post_like_path(post, :id),method: :delete do |f|
+    = form_with url: post_like_path(post, :id),method: :delete, remote: true do |f|
       = hidden_field_tag :user_id, current_user.id
-      = button_tag type: 'submit' , class:"unlike-btn" do
+      = button_tag type: 'submit' , class:"unlike-btn"  do
         = icon("fa", "heart")
     .like-count
       =post.likes.count
   -else
-    = form_with scope: :like, url: post_likes_path(post)  do |f|
+    = form_with scope: :like, url: post_likes_path(post), remote: true  do |f|
       = hidden_field_tag :user_id, current_user.id
-      = button_tag type: 'submit' , class:"like-btn" do
+      = button_tag type: 'submit' , class:"like-btn"  do
         = icon("far", "heart")
     .like-count
       =post.likes.count
