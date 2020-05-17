@@ -9,3 +9,14 @@ $(function() {
   tabs.click(tabSwitch);    
 });
 
+$(function() {
+  let followTabs = $(".menu-title");
+  function tabSwitch() {
+    $('.active-follow').removeClass("active-follow");
+    $(this).addClass("active-follow");
+    const index = followTabs.index(this);
+    $(".list-content").removeClass("show-follow").eq(index).addClass("show-follow");
+  }
+  followTabs.click(tabSwitch);    
+});
+

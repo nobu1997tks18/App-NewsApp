@@ -5,14 +5,14 @@ class UsersController < ApplicationController
   before_action :check_admin_or_current_user?,  only:[:destroy]
   
   def index
-    @users = User.all.includes(:posts, :followings ,:followers, :following_relationships, :follower_relationships)
+    @users = User.all.page(params[:page]).per(20)
   end
   
   def show
     @user = User.find(params[:id])
     @posts = @user.posts
     @like = Like.new
-    @likes = @user.likes
+    @likes = @user.likes.order(created_at: "desc" )
   end
   
   def new

@@ -14,6 +14,9 @@
         .follow_unfollow_btn
           %div{id:"follow_btn_#{@user.id}"}
             =render 'relationships/follow_btn',{ user: @user}
+        .delete-btn
+          -if current_user_admin?
+            =link_to "アカウント削除",user_path,{method: :delete}
       .user-profile__right
         %p
           = simple_format @user.profile

@@ -5,6 +5,7 @@
   }
   &__center{
     @include center-total-layout;
+    height: 200vh;
     .user-contents{
       .contents-title{
         @include center-contents-title;

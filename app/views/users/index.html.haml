@@ -1,10 +1,13 @@
 .users-index
+  =@url
   .users-index__left
     =render 'shared/left_side_bar', "@user": current_user
   .users-index__center
     .user-contents
       .contents-title
         %h2 All Users
+      .pagenation
+        = paginate @users 
       -@users.each do |user|
         .user-content
           .user-content-upper
@@ -19,6 +22,8 @@
                   =render 'relationships/follow_btn',{ user: user}
           .user-content-bottom
             = simple_format user.profile
+      .pagenation
+        = paginate @users
 
   .users-index__right
     =render 'shared/right_side_bar', "@user": current_user

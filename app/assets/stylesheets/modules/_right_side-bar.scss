@@ -1,7 +1,28 @@
 .follow-list{
   @include right-items-box;
-  h2{
-    @include items-title
+  &__titles{
+    display: flex;
+    .menu-title{
+      width: 50%;
+      background-color: $normal-bg;
+      opacity: 0.5;
+      h2{
+        @include items-title;
+      }
+    }
+    .menu-title.active-follow{
+      opacity: 1;
+      h2{
+        font-weight: bold;
+      }
+      background-color: $partial-bg;
+    }
+  }
+  .list-content{
+    display: none;
+  }
+  .list-content.show-follow{
+    display: block;
   }
   &__flex{
     display: flex;
