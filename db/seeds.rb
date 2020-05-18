@@ -9,7 +9,7 @@ User.create(
 )
 User.create(
   name: "田中太郎",
-  email: "nobu@test.com",
+  email: "taro@test.com",
   password: "aaaaaaaa",
   password_confirmation: "aaaaaaaa",
   profile: "プログラミング学習中です！ バックエンドエンジニアを目指しています！",
@@ -17,7 +17,7 @@ User.create(
 
 User.create(
   name: "田中次郎",
-  email: "taro@test.com",
+  email: "jiro@test.com",
   password: "aaaaaaaa",
   password_confirmation: "aaaaaaaa",
   profile: "フロントエンジニアを目指して学習中です！ Javascriptが得意です！"
