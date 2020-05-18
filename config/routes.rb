@@ -10,8 +10,6 @@ Rails.application.routes.draw do
   get 'news/wsj'
   get 'news/yahoo'
   get 'news/nhk'
-  get 'news/goal'
-  get 'news/soccer_king'
   
   resources :users do
     member do
