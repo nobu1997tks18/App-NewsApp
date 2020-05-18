@@ -40,8 +40,8 @@ end
 
 
 20.times do 
-  post_id = Faker::Number.within(range: 1..99)
-  user_id = Faker::Number.within(range: 1..99)
+  post_id = Faker::Number.within(range: 1..20)
+  user_id = Faker::Number.within(range: 1..20)
   Comment.create(
     content: "いい記事ですね！",
     user_id: user_id,
@@ -50,8 +50,8 @@ end
 end
 
 20.times do 
-  post_id = Faker::Number.within(range: 1..99)
-  user_id = Faker::Number.within(range: 1..99)
+  post_id = Faker::Number.within(range: 1..20)
+  user_id = Faker::Number.within(range: 1..20)
   Like.create(
     user_id: user_id,
     post_id: post_id
@@ -60,13 +60,13 @@ end
 
 users = User.all
 user = users.first
-followings = users[2..50]
-followers = users[12..70]
+followings = users[2..20]
+followers = users[2..20]
 followings.each {|following| user.follow(following)}
 followers.each {|follower| follower.follow(user)}
 
 20.times do 
-  user_id = Faker::Number.within(range: 1..99)
+  user_id = Faker::Number.within(range: 1..20)
   genre_id = 1
   post_id = Post.create(
     content: "この記事は非常に参考になります",
