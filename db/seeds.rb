@@ -30,16 +30,6 @@ User.create(
   )
 end
 
-99.times do 
-  user_id = Faker::Number.within(range: 1..99)
-  genre_id = Faker::Number.within(range: 1..7)
-  post_id = Post.create(
-    content: "この記事は非常に参考になります",
-    url: "https://newspicks.com/",
-    user_id: user_id,
-    genre_ids: genre_id
-  )
-end
 
 99.times do 
   post_id = Faker::Number.within(range: 1..99)
@@ -66,3 +56,14 @@ followings = users[2..50]
 followers = users[12..70]
 followings.each {|following| user.follow(following)}
 followers.each {|follower| follower.follow(user)}
+
+99.times do 
+  user_id = Faker::Number.within(range: 1..99)
+  genre_id = Faker::Number.within(range: 1..7)
+  post_id = Post.create(
+    content: "この記事は非常に参考になります",
+    url: "https://newspicks.com/",
+    user_id: user_id,
+    genre_ids: genre_id
+  )
+end
