@@ -1,5 +1,5 @@
 User.create(
-  name: "金澤伸行",
+  name: "管理者ユーザー",
   email: "nobu@test.com",
   password: "aaaaaaaa",
   password_confirmation: "aaaaaaaa",
@@ -31,7 +31,7 @@ User.create(
 end
 
 
-99.times do 
+20.times do 
   post_id = Faker::Number.within(range: 1..99)
   user_id = Faker::Number.within(range: 1..99)
   Comment.create(
@@ -41,7 +41,7 @@ end
   )
 end
 
-99.times do 
+20.times do 
   post_id = Faker::Number.within(range: 1..99)
   user_id = Faker::Number.within(range: 1..99)
   Like.create(
@@ -57,7 +57,7 @@ followers = users[12..70]
 followings.each {|following| user.follow(following)}
 followers.each {|follower| follower.follow(user)}
 
-99.times do 
+20.times do 
   user_id = Faker::Number.within(range: 1..99)
   genre_id = Faker::Number.within(range: 1..7)
   post_id = Post.create(
