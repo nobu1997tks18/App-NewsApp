@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_05_15_045012) do
 
-  create_table "comments", force: :cascade do |t|
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content"
     t.integer "user_id"
     t.integer "post_id"
@@ -22,13 +22,13 @@ ActiveRecord::Schema.define(version: 2020_05_15_045012) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "genres", force: :cascade do |t|
+  create_table "genres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "likes", force: :cascade do |t|
+  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
     t.integer "post_id"
     t.datetime "created_at", null: false
@@ -37,36 +37,26 @@ ActiveRecord::Schema.define(version: 2020_05_15_045012) do
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
-  create_table "posts", force: :cascade do |t|
+  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content"
     t.text "url"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    # t.string "genre"
     t.index ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  # create_table "posts_genres", force: :cascade do |t|
-  #   t.integer "post_id"
-  #   t.integer "genre_id"
-  #   t.datetime "created_at", null: false
-  #   t.datetime "updated_at", null: false
-  #   t.index ["genre_id"], name: "index_posts_genres_on_genre_id"
-  #   t.index ["post_id"], name: "index_posts_genres_on_post_id"
-  # end
-
-  create_table "posts_genres_relationships", force: :cascade do |t|
-    t.integer "post_id"
-    t.integer "genre_id"
+  create_table "posts_genres_relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "post_id"
+    t.bigint "genre_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["genre_id"], name: "index_posts_genres_relationships_on_genre_id"
     t.index ["post_id"], name: "index_posts_genres_relationships_on_post_id"
   end
 
-  create_table "relationships", force: :cascade do |t|
+  create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "follower_id"
     t.integer "following_id"
     t.datetime "created_at", null: false
@@ -76,7 +66,7 @@ ActiveRecord::Schema.define(version: 2020_05_15_045012) do
     t.index ["following_id"], name: "index_relationships_on_following_id"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.datetime "created_at", null: false
@@ -88,4 +78,6 @@ ActiveRecord::Schema.define(version: 2020_05_15_045012) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "posts_genres_relationships", "genres"
+  add_foreign_key "posts_genres_relationships", "posts"
 end
