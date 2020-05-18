@@ -6,7 +6,7 @@ ruby '2.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 # Use sqlite3 as the database for Active Record
-
+gem 'mysql2', '~> 0.4.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -47,7 +47,6 @@ gem 'mini_magick'
 gem 'font-awesome-sass'
 gem "jquery-rails"
 gem "kaminari"
-gem 'mysql2', '~> 0.4.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -71,10 +70,6 @@ group :test do
   gem 'chromedriver-helper'
   gem 'guard',                    '2.16.2'
   gem 'guard-minitest',           '2.4.4'
-end
-
-group :production do
-  gem 'pg', '0.20.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
