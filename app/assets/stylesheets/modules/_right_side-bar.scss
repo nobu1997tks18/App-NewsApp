@@ -76,3 +76,34 @@
   }
 }
 
+.news-links{
+  @include right-items-box;
+  @include news-link_btn;
+  &__title{
+    @include items-title
+  }
+  }
+  .news-box__bbc{
+    height: 400px;
+    display: none;
+  }
+  .news-box__wsj{
+    height: 400px;
+    display: none;
+  }
+  .news-box__yahoo{
+    height: 400px;
+    display: none;
+  }
+  .news-box__nhk{
+    height: 400px;
+    display: none;
+  }
+  .news-box__goal{
+    height: 400px;
+    display: none;
+  }
+  .news-box__soccer-king{
+    height: 400px;
+    display: none;
+  }

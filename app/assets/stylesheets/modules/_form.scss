@@ -1,73 +1,47 @@
 .input-page{
-  height: 100vh;
-  background-color: $normal-bg;
+  @include page-default-layout;
+  margin: 0 auto;
+  padding: 50px;
   .input-form{
     @include center-total-layout;
-    height: 100%;
-    margin: 0 auto;
-    text-align: unset;
     background-color: $partial-bg;
+    margin: 0 auto;
     &__title{
-      @include page-title;
       @include center-contents-title;
-      width:100%;
     }
-    &__template{
-      color: white;
-      padding-top: 20px;
-      margin: 0 auto 50px auto;
-      #errors_list{
-        color: red;
-        background-color: white;
-        border-radius: 15px;
-        text-align: center;
-        margin: 30px;
-      }
-      .form{
+    &__content{
+      padding: 40px;
+      .form-div{
         display: flex;
-        width: 100%;
-        padding: 10px;
-        line-height: 30px;
         flex-direction: column;
-        vertical-align: middle;
-        font-size: 20px;
-        .form-checkbox{
-          margin-bottom: 15px;
-        }
+        text-align: left;
+        margin: 30px 0;
         input{
-          width:20px;
+          width: 100%;
         }
         textarea{
-          height: 200px;
-          width: 100%;
           resize: none;
+          height: 200px;
         }
-        .text-field{
-          width: 100%;
+        .file-field{
+          background-color: white;
+          color: grey;
         }
-        #post_url{
-          width: 100%;
+        a{
+          font-size: 20px;
+          margin: 5px 0;
         }
       }
-      .form-picture{
-        .file-field{
-          width: 100%;
-          background-color: white;
+      .form-checkbox{
+        input{
+          width: 10px;
+        }
+        label{
+          margin-right: 10px;
         }
       }
       .form-submit{
-        input{
-          width: 100%;
-          margin-top: 20px;
-          background-color: grey;
-          color: white;
-          border-radius: 5px;
-        }
-      }
-      .easy-login{
-        a{
-          border-bottom: 1px solid white ;
-        }
+        margin-top: 50px;
       }
     }
   }

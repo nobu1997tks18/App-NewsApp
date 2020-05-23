@@ -1,17 +1,21 @@
 .input-page
-  = form_with model: @post, local: true do |f|
-    .input-form
-      .input-form__title
-        %h1 New Post
-      .input-form__template
+  .input-form
+    .input-form__title
+      %h1 New Post
+    .input-form__content
+      = form_with model: @post, local: true do |f|
         =render 'shared/post_errors_messages'
-        .form
+        .form-div
           =f.label "Genre"
           .form-checkbox
             =f.collection_check_boxes :genre_ids, Genre.all, :id, :name
+        .form-div
           =f.label "Text"
           =f.text_area :content ,placeholder: "140文字以内"
+        .form-div
           =f.label "URL"
           =f.text_field :url, placeholder: "サイトURLを記入してください"
-        .form-submit
+        .form-div.form-submit
           = f.submit "Post"
+        .form-div.form-links
+          = link_to "戻る", :back

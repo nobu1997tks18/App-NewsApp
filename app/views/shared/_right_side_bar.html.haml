@@ -1,18 +1,14 @@
 .follow-list
-  .follow-list__titles
-    .menu-title.active-follow
-      %div 
-        %h2
-          ="Follow #{@user.followings.count}"
-    .menu-title
-      %div
-        %h2
-          ="Follower #{@user.followers.count}"
-  .list-content.show-follow
-    -@user.followings.each do |following|
-      .follow-list__flex
-        = render 'shared/users_list',{listed_user: following}
-  .list-content
-    -@user.followers.each do |follower|
-      .follow-list__flex
-        = render 'shared/users_list',{listed_user: follower}
+  = render partial: 'shared/right_side_bar_follow', locals:{user: current_user }
+
+.news-links
+  .news-links__title
+    %h2  News Links
+  .news-link-btn.bbc
+    =link_to "BBC", news_bbc_path
+  .news-link-btn.wsj
+    =link_to "WSJ", news_wsj_path
+  .news-link-btn.yahoo
+    =link_to "Yahoo!", news_yahoo_path
+  .news-link-btn.nhk
+    =link_to "NHK", news_nhk_path

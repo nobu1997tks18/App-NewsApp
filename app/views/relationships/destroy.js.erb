@@ -1,1 +1,2 @@
 $("#follow_btn_<%=@user.id%>").html("<%= j(render partial: "relationships/follow_btn", locals:{user: @user })%>");
+$(".follow-list").html("<%= j(render partial: 'shared/right_side_bar_follow', locals:{user: current_user }) %>");
