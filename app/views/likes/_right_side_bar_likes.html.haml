@@ -1,10 +1,5 @@
 .like-list
-  .like-list-title
-    %h2
-      ="Like Users #{@post.likes.count}"
-  -@post.liked_users.each do |user|
-    .like-list__flex
-      = render 'shared/users_list', {listed_user: user}
+  =render partial: 'likes/like_user_list', locals: { post: @post }
 
 .news-links
   .news-links__title
