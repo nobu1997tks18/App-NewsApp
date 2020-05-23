@@ -12,7 +12,7 @@ User.create(
   email: "taro@test.com",
   password: "aaaaaaaa",
   password_confirmation: "aaaaaaaa",
-  profile: "プログラミング学習中です！バックエンドエンジニア目指して学習してます！"
+  profile: "プログラミング学習中です！バックエンドエンジニア目指して学習してます"
   )
 
 User.create(
