@@ -17,7 +17,7 @@
             =render 'relationships/follow_btn',{ user: @user}
         .delete-btn
           -if current_user_admin?
-            =link_to "アカウント削除",user_path,{method: :delete}, {confirm: "削除してよろしいですか？"}
+            =link_to "アカウント削除", user_path(@user), method: :delete, data: {confirm: "削除してよろしいですか？"}
       .user-profile__right
         %p
           = simple_format @user.profile
