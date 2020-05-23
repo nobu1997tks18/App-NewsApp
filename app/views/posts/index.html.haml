@@ -15,8 +15,8 @@
     .user-info__right
       =render 'shared/right_side_bar'
 - else
-  .signup-page
-    .signup-page__top
+  .top-page
+    .top-page__top
       %h1 Output your reviews
       %p ニュースの学びにアウトプットを
       .top-links
@@ -24,7 +24,7 @@
         =link_to "ログイン", login_path
         =link_to "お試しログイン", easy_login_path, method: :post
 
-    .signup-page__center
+    .top-page__center
       %h2 What you can do on this web site?
       .intro-contents
         .intro-contents__content

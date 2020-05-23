@@ -1,3 +1,4 @@
+// news_mixins---------------------------------
 @mixin news_link_btn{
   .bbc{
     background-color: red;
@@ -37,15 +38,7 @@
   }
 }
 
-@mixin page-title{
-  width: 100vw;
-  color: white;
-  font-size: 60px;
-  font-weight: bold;
-  text-align: center;
-  padding: 20px 0;
-}
-
+// button-mixins------------------------
 @mixin follow-btn-color{
   .list-btn{
     display: block;
@@ -82,6 +75,7 @@
   }
 }
 
+// user-list-----------------------
 @mixin user-list-image-size{
   height: 50px;
   width: 50px;
@@ -93,6 +87,16 @@
   width: 150px;
   line-height: 50px;
   padding-left: 10px;
+}
+
+// seperated-pages-mixins---------------------------
+@mixin page-title{
+  width: 100vw;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
 }
 
 @mixin items-title{
