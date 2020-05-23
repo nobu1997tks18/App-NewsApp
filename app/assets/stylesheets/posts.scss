@@ -74,10 +74,22 @@
           }
         }
         .intro-images{
-          height: 400px;
+          height: 300px;
           width: 300px;
           margin: 15px auto;
-          background-color: grey;
+          border: 1px solid white;
+          background-size: 100%;
+        }
+        .intro-image-left{
+          background-image: url("news.png");
+        }
+        .intro-image-center{
+          background-image: url("post.png");
+          background-size: 100%;
+        }
+        .intro-image-right{
+          background-image: url("comment.png");
+          background-size: 100%;
         }
       }
     }
