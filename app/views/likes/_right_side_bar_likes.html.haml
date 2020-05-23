@@ -5,3 +5,15 @@
   -@post.liked_users.each do |user|
     .like-list__flex
       = render 'shared/users_list', {listed_user: user}
+
+.news-links
+  .news-links__title
+    %h2  News Links
+  .news-link-btn.bbc
+    =link_to "BBC", news_bbc_path
+  .news-link-btn.wsj
+    =link_to "WSJ", news_wsj_path
+  .news-link-btn.yahoo
+    =link_to "Yahoo!", news_yahoo_path
+  .news-link-btn.nhk
+    =link_to "NHK", news_nhk_path

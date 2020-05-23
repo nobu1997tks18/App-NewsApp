@@ -51,6 +51,7 @@
     display: block;
     color: white;
     padding:5px 10px;
+    border: none;
     border-radius: 25px;
 
   }
@@ -122,8 +123,6 @@
   padding-bottom: 10px;
   background-color: $partial-bg;
 }
-
-
 
 @mixin center-total-layout{
   height: 150vh;
