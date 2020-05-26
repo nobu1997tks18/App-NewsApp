@@ -22,6 +22,7 @@
 - ログインユーザのフォロー、フォロワーリスト
 - フォローボタン
 - ニュース閲覧ページへのリンク
+<img width="３００" alt="代替テキスト" src="https://i.gyazo.com/e4bc9bc099238d4dc6ecd15c78074363.png)](https://gyazo.com/e4bc9bc099238d4dc6ecd15c78074363">
 [![ログイン後トップページ](https://i.gyazo.com/e4bc9bc099238d4dc6ecd15c78074363.png)](https://gyazo.com/e4bc9bc099238d4dc6ecd15c78074363)
 
 ### 2.ユーザー一覧ページ
