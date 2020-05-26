@@ -22,10 +22,10 @@
 - ログインユーザのフォロー、フォロワーリスト
 - フォローボタン
 - ニュース閲覧ページへのリンク
-[![ログイン後トップページ](https://i.gyazo.com/e4bc9bc099238d4dc6ecd15c78074363.png)](https://gyazo.com/e4bc9bc099238d4dc6ecd15c78074363)
+[![Image from Gyazo](https://i.gyazo.com/980a402698fa37438f6d557522354553.png)](https://gyazo.com/980a402698fa37438f6d557522354553)
 
 ### 2.ユーザー一覧ページ
-[![ユーザ一覧ページ](https://i.gyazo.com/2b34f6a8b0d60762f59de667cbbc07ec.png)](https://gyazo.com/2b34f6a8b0d60762f59de667cbbc07ec)
+[![Image from Gyazo](https://i.gyazo.com/e06f1f6cbd4925105950a48b776dda09.png)](https://gyazo.com/e06f1f6cbd4925105950a48b776dda09)
 
 ### 3.ユーザ個人ページ
 ####  中央
@@ -33,10 +33,10 @@
 - ユーザトップ画像
 - ユーザ投稿一覧
 - ユーザいいね 一覧
-[![ユーザ個人ページ](https://i.gyazo.com/43b92bb15720b18c3d718b72a9732a17.png)](https://gyazo.com/43b92bb15720b18c3d718b72a9732a17)
+[![Image from Gyazo](https://i.gyazo.com/b92591e5fc64c3a3c7894b75d15aaede.png)](https://gyazo.com/b92591e5fc64c3a3c7894b75d15aaede)
 
 ### 4.ジャンル別投稿一覧
-[![ジャンル別投稿一覧](https://i.gyazo.com/934ccbb7ec7d379eac7b05b096158617.png)](https://gyazo.com/934ccbb7ec7d379eac7b05b096158617)
+[![Image from Gyazo](https://i.gyazo.com/41c46036002234377d0babf5b4a65bc7.png)](https://gyazo.com/41c46036002234377d0babf5b4a65bc7)
 
 ### 5.コメントページ
 #### 中央
@@ -44,22 +44,22 @@
 - コメント一覧表示
 #### 右サイドバー
 - 投稿にいいねしたユーザー一覧
-[![コメント機能](https://i.gyazo.com/e813f8c15800e51e8a2f1032c16771bb.png)](https://gyazo.com/e813f8c15800e51e8a2f1032c16771bb)
+[![Image from Gyazo](https://i.gyazo.com/4b4d340bf67b61a16eb6526c3138a7ba.png)](https://gyazo.com/4b4d340bf67b61a16eb6526c3138a7ba)
 
 ### 6.ニュース閲覧ページ
 #### 中央
 - ニュースAPIを利用してドメインごとにニュースを表示
 - タイトルリンクをクリックすることで、該当するニュースの外部ページへ移動
-[![ニュース閲覧ページ](https://i.gyazo.com/a3c5358b1295975e4aa862eb0e95c712.jpg)](https://gyazo.com/a3c5358b1295975e4aa862eb0e95c712)
+[![Image from Gyazo](https://i.gyazo.com/ed2cc40d670fd3d634ddc1ae11397326.jpg)](https://gyazo.com/ed2cc40d670fd3d634ddc1ae11397326)
 
 ### 7.各入力フォーム
 #### ユーザー登録フォーム(写真はページを縮小して撮影)
-[![ユーザ登録フォーム](https://i.gyazo.com/3f842253034434a5fda3541f0db7f91c.png)](https://gyazo.com/3f842253034434a5fda3541f0db7f91c)
+[![Image from Gyazo](https://i.gyazo.com/706fc716aa4f2a9a8dd432e882ff6207.png)](https://gyazo.com/706fc716aa4f2a9a8dd432e882ff6207)
 #### ログインフォーム
-[![ログインフォーム](https://i.gyazo.com/f6c51210f1417c0dec99296e260c2d0b.png)](https://gyazo.com/f6c51210f1417c0dec99296e260c2d0b)
+[![Image from Gyazo](https://i.gyazo.com/7f5b624ba4b7766820781a2d8cc5cd31.png)](https://gyazo.com/7f5b624ba4b7766820781a2d8cc5cd31)
 #### ユーザ情報編集(写真はページを縮小して撮影)
 - 管理者ユーザー以外はアカウント削除ボタンが表示される
-[![ユーザー情報編集](https://i.gyazo.com/f90d1a2fe53bde54981fd3958b0d3305.png)](https://gyazo.com/f90d1a2fe53bde54981fd3958b0d3305)
+[![Image from Gyazo](https://i.gyazo.com/6b587a70e9c833b24af4349b4ff7b6de.png)](https://gyazo.com/6b587a70e9c833b24af4349b4ff7b6de)
 #### 投稿フォーム
-[![投稿フォーム](https://i.gyazo.com/ae27ab85e8c5c3e6518ea98fce2c6e3d.png)](https://gyazo.com/ae27ab85e8c5c3e6518ea98fce2c6e3d)
+[![Image from Gyazo](https://i.gyazo.com/9bc7eb09b4a24c8a1329cb7380723890.png)](https://gyazo.com/9bc7eb09b4a24c8a1329cb7380723890)
 
