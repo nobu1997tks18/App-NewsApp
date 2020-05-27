@@ -51,7 +51,7 @@
 
 
 ### 6.ニュース閲覧ページ
-[![Image from Gyazo](https://i.gyazo.com/ed2cc40d670fd3d634ddc1ae11397326.jpg)](https://gyazo.com/ed2cc40d670fd3d634ddc1ae11397326)
+[![Image from Gyazo](https://i.gyazo.com/77ef89348283c9ae6114b28e09458f1d.jpg)](https://gyazo.com/77ef89348283c9ae6114b28e09458f1d)
 #### 中央
 - ニュースAPIを利用してドメインごとにニュースを表示
 - タイトルリンクをクリックすることで、該当するニュースの外部ページへ移動
