@@ -63,8 +63,9 @@
 #### ログインフォーム
 [![Image from Gyazo](https://i.gyazo.com/7f5b624ba4b7766820781a2d8cc5cd31.png)](https://gyazo.com/7f5b624ba4b7766820781a2d8cc5cd31)
 #### ユーザ情報編集(写真はページを縮小して撮影)
-- 管理者ユーザー以外はアカウント削除ボタンが表示される
 [![Image from Gyazo](https://i.gyazo.com/6b587a70e9c833b24af4349b4ff7b6de.png)](https://gyazo.com/6b587a70e9c833b24af4349b4ff7b6de)
+- 管理者ユーザー以外はアカウント削除ボタンが表示される
+
 #### 投稿フォーム
 [![Image from Gyazo](https://i.gyazo.com/9bc7eb09b4a24c8a1329cb7380723890.png)](https://gyazo.com/9bc7eb09b4a24c8a1329cb7380723890)
 
