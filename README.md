@@ -5,7 +5,7 @@
 - jQuery
 - VSCode
 - Github
-- AWS(デプロイ準備中)
+- Heroku(AWSに変更予定)
 - Docker(設定準備中)
 
 ## アプリの機能
