@@ -9,6 +9,6 @@ class Post < ApplicationRecord
   default_scope -> {order(created_at: :desc)} 
   validates :user_id, presence: true, allow_nil: true
   validates :content, presence: true, length:{maximum:140 }
-  validates :url, presence: true, length: {maximum: 500}
+  validates :url, presence: true, length: {maximum: 200}
   validates :posts_genres_relationship_ids, presence: true
 end
