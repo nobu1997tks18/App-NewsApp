@@ -1,5 +1,4 @@
 # [Rails + jQuery]NewsAPIを使ったニュースの閲覧＋投稿機能を備えたSNSアプリ
-https://output-yournews-349195u42952.herokuapp.com/
 ## 開発環境
 - Ruby on Rails
 - jQuery
