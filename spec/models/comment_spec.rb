@@ -15,13 +15,13 @@ describe Comment do
         expect(post.errors[:content]).to include("can't be blank")
       end
 
-      it "user_idがないと登録できない事" do
+      it "userがないと投稿できない事" do
         post = build(:comment, user: nil)
         post.valid?
         expect(post.errors[:user]).to include("must exist")
       end
 
-      it "post_idがないと登録できない事" do
+      it "postがないと投稿できない事" do
         post = build(:comment, post: nil)
         post.valid?
         expect(post.errors[:post]).to include("must exist")
