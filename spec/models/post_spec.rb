@@ -47,6 +47,12 @@ describe Post do
         post.valid?
         expect(post.errors[:url]).to include("is too long (maximum is 200 characters)")
       end
+
+      it "user_idがないと登録できない事" do
+        post = build(:post, user: nil)
+        post.valid?
+        expect(post.errors[:user]).to include("must exist")
+      end
     end
   end
 end

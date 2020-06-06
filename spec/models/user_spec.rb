@@ -95,4 +95,82 @@ describe User do
       end
     end
   end
+  describe "Method" do
+    describe "def follow(other_user)" do
+      it "userがother_userをフォローした場合followingsにother_userを追加する事" do
+        user = create(:user)
+        other_user = create(:user)
+        user.follow(other_user)
+        expect(user.followings.count).to eq(1)
+      end
+
+      it "userがother_userをフォローした場合followersにuserを追加する事" do
+        user = create(:user)
+        other_user = create(:user)
+        user.follow(other_user)
+        expect(other_user.followers.count).to eq(1)
+      end
+    end
+
+    describe "def following?(other_user)" do
+      it "userがother_userをフォローしていた場合following?(other_user)がtrueを返す事" do
+        user = create(:user)
+        other_user = create(:user)
+        user.follow(other_user)
+        expect(user.following?(other_user)).to be_truthy 
+      end
+
+      it "userがother_userをフォローしていない場合following?(other_user)がfalseを返す事" do
+        user = create(:user)
+        other_user = create(:user)
+        expect(user.following?(other_user)).to be_falsey 
+      end
+    end
+
+    describe "unfollow(other_user)" do
+      it "unfollow(other_user)の結果、followingsが１人減る事" do
+        user = create(:user)
+        other_user = create(:user)
+        user.follow(other_user)
+        user.unfollow(other_user)
+        expect(user.followings.count).to eq(0)
+      end
+
+      it "unfollow(other_user)の結果、followersが1人減る事" do
+        user = create(:user)
+        other_user = create(:user)
+        user.follow(other_user)
+        user.unfollow(other_user)
+        expect(other_user.followers.count).to eq(0)
+      end
+    end
+
+    describe "def feed" do
+      it "feedの結果、followingsのpostを取得できる事" do
+        user = create(:user)
+        other_user = create(:user)
+        other_user2 = create(:user)
+        user.follow(other_user)
+        user.follow(other_user2)
+        create_list(:post, 5, user: other_user)
+        create_list(:post, 5, user: other_user2)
+        expect(user.feed.count).to eq(10)
+      end
+    end
+
+    describe "already_liked?(post)" do
+      it "postをいいねしていたらalready_liked?(post)がtrueを返すこと" do
+        user = create(:user)
+        post = create(:post)
+        like = create(:like, user: user, post: post)
+        expect(user.already_liked?(post)).to be_truthy
+      end
+
+      it "postをいいねしていなかったらalready_liked?(post)がfalseを返すこと" do
+        user = create(:user)
+        post = create(:post)
+        expect(user.already_liked?(post)).to be_falsey
+      end
+    end
+  end
 end

@@ -14,7 +14,7 @@
           = @user.name
         .follow_unfollow_btn
           %div{id:"follow_btn_#{@user.id}"}
-            =render 'relationships/follow_btn',{ user: @user}
+            =render 'shared/follow_btn',{ user: @user}
         .delete-btn
           -if current_user_admin?
             =link_to "アカウント削除", user_path(@user), method: :delete, data: {confirm: "削除してよろしいですか？"}
@@ -31,11 +31,11 @@
     .show-contents.show
       .user-posts
         -@posts.each do |post|
-          =render 'posts/post_list',{post: post}
+          =render 'shared/post_list',{post: post}
     .show-contents
       .user-posts
         -@likes.each do |like|
-          =render 'posts/post_list',{post: like.post}
+          =render 'shared/post_list',{post: like.post}
 
   .user-info__right
     =render 'shared/right_side_bar' 

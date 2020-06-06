@@ -20,7 +20,7 @@
                 =link_to "#{user.name}", user_path(user)
               .follow-unfollow-btn
                 %div{id:"follow_btn_#{user.id}"}
-                  =render 'relationships/follow_btn',{ user: user}
+                  =render 'shared/follow_btn',{ user: user}
           .user-content-bottom
             = simple_format user.profile
       .pagenation

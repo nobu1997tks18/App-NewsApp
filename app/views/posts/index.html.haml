@@ -10,7 +10,7 @@
             TOP
         .user-posts
           -@posts.each do |post|
-            =render 'posts/post_list',{post: post}
+            =render 'shared/post_list',{post: post}
 
     .user-info__right
       =render 'shared/right_side_bar'

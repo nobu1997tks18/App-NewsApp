@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   attr_accessor :name, :email
   before_action :check_login_user?, only:[:show, :edit, :update, :followings, :followers]
   before_action :check_current_user?, only:[:edit, :update]
-  before_action :check_admin_or_current_user?,  only:[:destroy]
   
   def index
     @users = User.all.page(params[:page]).per(20)
@@ -48,6 +47,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id]).destroy
+    check_admin_or_current_user?
     flash[:succsess] = "ユーザを削除しました"
     redirect_to root_path
   end
