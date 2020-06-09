@@ -4,7 +4,7 @@
   .user-info__center
     .show-contents.show
       .comment-form
-        =render template: "shared/new", locals:{post: @post, user: current_user}
+        =render template: "comments/new", locals:{post: @post, user: current_user}
       .user-posts
         =render 'shared/post_list',{post: @post}
       .user-reply

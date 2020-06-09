@@ -62,4 +62,6 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
   config.include FactoryBot::Syntax::Methods
+
+  Dir[Rails.root.join('spec/supports/login_helper.rb')].each { |f| require f } #support directoryをrequire
 end
