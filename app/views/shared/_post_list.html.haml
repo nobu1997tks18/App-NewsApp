@@ -23,4 +23,4 @@
         .far.fa-comment-dots
         ="#{post.comments.count}"
       %div{id:"like-btn-#{post.id}"}
-        =render partial: 'likes/like_btn',locals:{post: post}
+        =render partial: 'shared/like_btn',locals:{post: post}

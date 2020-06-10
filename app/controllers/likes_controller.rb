@@ -1,4 +1,5 @@
 class LikesController < ApplicationController
+  before_action :check_login_user?
   def create
     @like = current_user.likes.create(post_id: params[:post_id])
     @likes = current_user.likes

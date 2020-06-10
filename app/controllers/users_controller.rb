@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
   attr_accessor :name, :email
-  before_action :check_login_user?, only:[:show, :edit, :update, :followings, :followers]
-  before_action :check_current_user?, only:[:edit, :update]
-  before_action :check_admin_or_current_user?,  only:[:destroy]
+  before_action :check_login_user?, only:[:show, :edit, :update,:destroy]
+  before_action :check_current_user?, only:[:edit, :update, :destroy]
   
   def index
     @users = User.all.page(params[:page]).per(20)
@@ -47,21 +46,14 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = User.find(params[:id]).destroy
-    flash[:succsess] = "ユーザを削除しました"
-    redirect_to root_path
-  end
-
-  def followings
-    @user = User.find(params[:id])
-    @users = @user.followings
-    render 'following'
-  end
-
-  def followers
-    @user = User.find(params[:id])
-    @users = @user.followers
-    render 'follower'
+    check_admin_or_current_user?
+    if @user = User.find(params[:id]).destroy
+      flash[:succsess] = "ユーザを削除しました"
+      redirect_to root_path
+    else
+      flash[:alert] = "アクセス権限がありません"
+      render :edit
+    end
   end
 
   private

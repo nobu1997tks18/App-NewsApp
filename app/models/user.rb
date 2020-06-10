@@ -17,16 +17,17 @@ class User < ApplicationRecord
   Email_Regex = /\A[\w\-.]+@\w*.(?!.*?\.\.)(\.[\w\.]+)\z/
   validates :email, presence: true,length: {maximum:100},format:{with: Email_Regex},uniqueness:{case_sensitive: false}
   validates :password, presence: true, length: {minimum: 8}, allow_nil: true
-
-  def following?(other_user)
-    followings.include?(other_user)
-  end
-
+  
   def follow(other_user)
     unless self == other_user
       followings << other_user
     end
   end
+  
+  def following?(other_user)
+    followings.include?(other_user)
+  end
+
 
   def unfollow(other_user)
     following_relationships.find_by(following_id: other_user.id).destroy

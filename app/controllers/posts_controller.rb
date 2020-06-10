@@ -1,20 +1,18 @@
 class PostsController < ApplicationController
+  before_action :set_post, except:[:index,:new,:create,:show, :destroy]
   before_action :check_login_user?,except: :index
+
   def index
     @user = current_user
     @posts = @user.feed if user_login?
     @like = Like.new
   end
-
-  def show
-    @post = Post.find(params[:id])
-  end
-
+  
   def new
     @post =Post.new
     @genres = Genre.all
   end
-
+  
   def create
     @post = Post.create(params_post)
     if @post.save
@@ -24,6 +22,10 @@ class PostsController < ApplicationController
       flash.now[:alert] = "内容を確認してください"
       render :new
     end
+  end
+  
+  def show
+    @post = Post.find(params[:id])
   end
 
   def destroy
@@ -35,5 +37,9 @@ class PostsController < ApplicationController
   private
     def params_post
       params.require(:post).permit(:content, :url, genre_ids:[]).merge(user_id: current_user.id)
+    end
+
+    def set_post
+      @post = Post.find(params[:id])
     end
 end
