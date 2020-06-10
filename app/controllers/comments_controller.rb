@@ -1,20 +1,30 @@
 class CommentsController < ApplicationController
+  before_action :check_login_user?
   def new
     @comment = Comment.new
     @user = current_user
   end
 
   def create
-    @comment = Comment.create!(params_comment)
+    @post = Post.find(params[:post_id])
+    @comment = Comment.create(params_comment)
     if @comment.save
       flash[:succsess] = "コメントを投稿しました"
+      redirect_back(fallback_location: root_path)
+    else
+      redirect_to post_url(@post)
     end
-    redirect_back(fallback_location: root_path)
   end
 
   def destroy
+    @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id]).destroy
-    redirect_back(fallback_location: root_path)
+    if @comment.destroy
+      redirect_back(fallback_location: root_path)
+    else
+      flash[:alert] = "削除に失敗しました"
+      redirect_to post_url(@post)
+    end
   end
 
   private

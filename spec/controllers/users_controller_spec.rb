@@ -23,11 +23,12 @@ describe UsersController do
         expect(assigns[:user]).to eq user
       end
   
-      it "@postに正しい値が入っていること" do
+      it "@postsに正しい値が入っていること" do
         user = create(:user)
-        login(user)
-        posts = create_list(:post, 5,  user: user)
+        login user
+        create_list(:post, 5,  user_id: user.id)
         get :show, params: {id: user}
+        posts = user.posts
         expect(assigns[:posts]).to eq posts
       end
   

@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, except:[:index, :show, :destroy]
+  before_action :set_post, except:[:index,:new,:create,:show, :destroy]
   before_action :check_login_user?,except: :index
 
   def index
