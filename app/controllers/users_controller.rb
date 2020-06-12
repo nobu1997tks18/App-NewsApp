@@ -4,14 +4,14 @@ class UsersController < ApplicationController
   before_action :check_current_user?, only:[:edit, :update, :destroy]
   
   def index
-    @users = User.all.page(params[:page]).per(20)
+    @users = User.all.page(params[:page]).per(10)
   end
   
   def show
     @user = User.find(params[:id])
-    @posts = @user.posts
+    @posts = @user.posts.page(params[:page]).per(10)
     @like = Like.new
-    @likes = @user.likes.order(created_at: "desc" )
+    @likes = @user.likes.order(created_at: "desc" ).page(params[:page]).per(10)
   end
   
   def new

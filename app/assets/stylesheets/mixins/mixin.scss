@@ -106,6 +106,7 @@
 }
 
 @mixin page-default-layout{
+  min-height: 92vh;
   display: flex;
   background-color: $normal-bg;
   color: white;
@@ -129,6 +130,7 @@
 }
 
 @mixin center-total-layout{
+  height: 100%;
   width: 50%;
   background-color: $normal-bg;
   border: $border-color;

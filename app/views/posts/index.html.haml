@@ -9,8 +9,10 @@
           %h2
             TOP
         .user-posts
+          = paginate @posts 
           -@posts.each do |post|
             =render 'shared/post_list',{post: post}
+          = paginate @posts 
 
     .user-info__right
       =render 'shared/right_side_bar'
