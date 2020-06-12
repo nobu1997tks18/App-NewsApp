@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :check_current_user?, only:[:edit, :update, :destroy]
   
   def index
-    @users = User.all.page(params[:page]).per(10)
+    @users = User.all.page(params[:page]).per(15)
   end
   
   def show
