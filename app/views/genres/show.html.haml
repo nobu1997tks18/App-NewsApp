@@ -7,7 +7,9 @@
         %h2
           =@genre.name
       .user-posts
+        = paginate @relationships 
         -@relationships.each do |relationship|
           =render 'shared/post_list',{post: relationship.post}
+        = paginate @relationships 
   .user-info__right
     =render 'shared/right_side_bar', {"@user": current_user}

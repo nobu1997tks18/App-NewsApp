@@ -30,12 +30,17 @@
           %p いいね一覧          
     .show-contents.show
       .user-posts
+        = paginate @posts
         -@posts.each do |post|
           =render 'shared/post_list',{post: post}
+        = paginate @posts
+          
     .show-contents
       .user-posts
+        = paginate @likes
         -@likes.each do |like|
           =render 'shared/post_list',{post: like.post}
+        = paginate @likes
 
   .user-info__right
     =render 'shared/right_side_bar' 
