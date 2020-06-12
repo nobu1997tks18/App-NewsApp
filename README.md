@@ -1,6 +1,6 @@
 # [Rails + jQuery]NewsAPIを使ったニュースの閲覧＋投稿機能を備えたSNSアプリ
 ### https://output-yournews-349195u42952.herokuapp.com/
-- お試しログインボタンからテストアカウントでログイン可能です
+- お試しログインボタンから以下のアカウントでログイン可能です
 - email:taro@test.com
 - password: aaaaaaaa
 
