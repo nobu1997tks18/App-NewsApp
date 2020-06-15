@@ -1,49 +1,9 @@
-.follow-list{
+.user-data-links{
   @include right-items-box;
-  &__titles{
-    display: flex;
-    .menu-title{
-      width: 50%;
-      background-color: $normal-bg;
-      opacity: 0.5;
-      h2{
-        @include items-title;
-      }
+  &__title{
+    h2{
+      @include items-title;
     }
-    .menu-title.active-follow{
-      opacity: 1;
-      h2{
-        font-weight: bold;
-      }
-      background-color: $partial-bg;
-    }
-  }
-  .list-content{
-    display: none;
-  }
-  .list-content.show-follow{
-    display: block;
-  }
-  &__flex{
-    display: flex;
-    align-items: center;
-    .user-image{
-      img{
-        @include user-list-image-size;
-      }
-    }
-    .user-name{
-      text-align: left;
-      overflow: hidden;
-      a{
-        @include user-list-font;
-      }
-    }
-    .list-btn{
-      width: 80px;
-      font-size: 10px;
-    }
-    @include follow-btn-color
   }
 }
 

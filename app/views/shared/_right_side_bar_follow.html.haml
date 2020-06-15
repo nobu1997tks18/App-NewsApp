@@ -1,17 +1,18 @@
-.follow-list__titles
-  .menu-title.active-follow
-    %div 
-      %h2
-        ="Follow #{user.followings.count}"
-  .menu-title
-    %div
-      %h2
-        ="Follower #{user.followers.count}"
-.list-content.show-follow
-  -user.followings.each do |following|
-    .follow-list__flex
-      = render 'shared/users_list',{listed_user: following}
-.list-content
-  -user.followers.each do |follower|
-    .follow-list__flex
-      = render 'shared/users_list',{listed_user: follower}
+.user-data-links__title
+  %h2 User Data
+  .links__options
+    %ul.option-list
+      %li
+        =link_to "Follow #{user.followings.count}","#"
+      %li
+        =link_to "Follower #{user.followers.count}","#"
+      %li
+        =link_to @current_user.name, user_path(@current_user)
+-# .list-content.show-follow
+-#   -user.followings.each do |following|
+-#     .follow-list__flex
+-#       = render 'shared/users_list',{listed_user: following}
+-# .list-content
+-#   -user.followers.each do |follower|
+-#     .follow-list__flex
+-#       = render 'shared/users_list',{listed_user: follower}

@@ -13,8 +13,6 @@
       %li
         =link_to "Edit", edit_user_path(@current_user)
       %li
-        =link_to @current_user.name, user_path(@current_user)
-      %li
         =link_to "Logout", logout_path,{method: :delete}
 
 .links
