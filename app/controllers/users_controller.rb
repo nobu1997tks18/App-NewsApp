@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   before_action :check_current_user?, only:[:edit, :update, :destroy]
   
   def index
+    @user = current_user
     @users = User.all.page(params[:page]).per(15)
   end
   
@@ -54,6 +55,16 @@ class UsersController < ApplicationController
       flash[:alert] = "アクセス権限がありません"
       render :edit
     end
+  end
+
+  def followings
+    @user = User.find(params[:id])
+    @followings = @user.followings.page(params[:page]).per(15)
+  end
+
+  def followers
+    @user = User.find(params[:id])
+    @followers = @user.followers.page(params[:page]).per(15)
   end
 
   private

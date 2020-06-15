@@ -1,0 +1,31 @@
+.users-index
+  =@url
+  .users-index__left
+    =render 'shared/left_side_bar'
+    
+  .users-index__center
+    .user-contents
+      .contents-title
+        %h2 
+          = yield(:title)
+      .pagenation
+        = paginate users
+      -users.each do |user|
+        .user-content
+          .user-content-upper
+            .user-content-upper__left
+              .user-image
+                =image_tag user.picture.url
+            .user-content-upper__right
+              .user-name
+                =link_to "#{user.name}", user_path(user)
+              .follow-unfollow-btn
+                %div{id:"follow_btn_#{user.id}"}
+                  =render 'shared/follow_btn',{ user: user}
+          .user-content-bottom
+            = simple_format user.profile
+      .pagenation
+        = paginate users
+
+  .users-index__right
+    =render 'shared/right_side_bar'
