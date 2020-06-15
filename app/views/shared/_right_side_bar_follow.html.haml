@@ -1,17 +1,11 @@
-.follow-list__titles
-  .menu-title.active-follow
-    %div 
-      %h2
-        ="Follow #{user.followings.count}"
-  .menu-title
-    %div
-      %h2
-        ="Follower #{user.followers.count}"
-.list-content.show-follow
-  -user.followings.each do |following|
-    .follow-list__flex
-      = render 'shared/users_list',{listed_user: following}
-.list-content
-  -user.followers.each do |follower|
-    .follow-list__flex
-      = render 'shared/users_list',{listed_user: follower}
+.user-data-links__title
+  %h2 
+    ="#{@user.name}さん"
+  .links__options
+    %ul.option-list
+      %li
+        =link_to "Follow #{user.followings.count}",followings_user_path(user)
+      %li
+        =link_to "Follower #{user.followers.count}",followers_user_path(user)
+      %li
+        =link_to "マイページへ", user_path(current_user)

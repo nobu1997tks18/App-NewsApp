@@ -1,3 +1,6 @@
+.user-data-links
+  = render partial: 'shared/right_side_bar_follow', locals:{user: @user }
+
 .like-list
   =render partial: 'shared/like_user_list', locals: { post: @post }
 
