@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @user = current_user
-    @posts = @user.feed.page(params[:page]).per(10) if user_login?
+    @posts = @user.feed.page(params[:page]).per(10).includes(:user, :genres) if user_login?
     @like = Like.new
   end
   
