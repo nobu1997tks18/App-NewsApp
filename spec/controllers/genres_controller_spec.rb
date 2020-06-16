@@ -17,7 +17,7 @@ describe GenresController do
         login user
         genre = create(:genre)
         post = create(:post)
-        relationships = PostsGenresRelationship.where(genre_id: genre.id).order(created_at: "desc" )
+        relationships = PostsGenresRelationship.where(genre_id: genre.id).first(9)
         get :show, params: {id: genre.id}
         expect(assigns[:relationships]).to eq relationships
       end

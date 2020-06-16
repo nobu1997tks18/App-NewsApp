@@ -22,7 +22,7 @@ describe PostsController do
         other_user = create(:user)
         user.follow(other_user)
         post = create(:post, user: other_user)
-        posts = user.feed
+        posts = user.feed.first(9)
         get :index
         expect(assigns[:posts]).to eq posts
       end

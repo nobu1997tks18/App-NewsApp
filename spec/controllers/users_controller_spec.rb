@@ -187,4 +187,64 @@ describe UsersController do
       end
     end
   end
+
+  describe "GET #followings" do
+    context "ログインしている場合" do
+      it "@userに正しい値が入っていること" do
+        user = create(:user)
+        login user
+        get :followings, params: {id: user}
+        expect(assigns[:user]).to eq user
+      end
+
+      it "@followingsに正しい値が入っていること" do
+        user = create(:user)
+        login user
+        other_user = create(:user)
+        user.follow(other_user)
+        followings = user.followings
+        get :followings, params: {id: user}
+        expect(assigns[:followings]).to eq followings
+      end
+    end
+
+    context "ログインしていない場合" do
+      it "login_pathに遷移すること" do
+        user = create(:user)
+        current_user = user
+        get :followings, params: {id: user}
+        expect(response).to redirect_to(login_path)
+      end
+    end
+  end
+
+  describe "GET #followers" do
+    context "ログインしている場合" do
+      it "@userに正しい値が入っていること" do
+        user = create(:user)
+        login user
+        get :followers, params: {id: user}
+        expect(assigns[:user]).to eq user
+      end
+
+      it "@followersに正しい値が入っていること" do
+        user = create(:user)
+        login user
+        other_user = create(:user)
+        other_user.follow(user)
+        followers = user.followers
+        get :followers, params: {id: user}
+        expect(assigns[:followers]).to eq followers
+      end
+    end
+
+    context "ログインしていない場合" do
+      it "login_pathに遷移すること" do
+        user = create(:user)
+        current_user = user
+        get :followers, params: {id: user}
+        expect(response).to redirect_to(login_path)
+      end
+    end
+  end
 end

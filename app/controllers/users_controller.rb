@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   attr_accessor :name, :email
-  before_action :check_login_user?, only:[:show, :edit, :update,:destroy]
+  before_action :check_login_user?, only:[:show, :edit, :update,:destroy, :followings, :followers]
   before_action :check_current_user?, only:[:edit, :update, :destroy]
   
   def index
