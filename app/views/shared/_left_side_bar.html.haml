@@ -4,15 +4,15 @@
   .links__options
     %ul.options-list
       %li
-        =link_to "Top", root_path
+        =link_to "トップ", root_path
       %li
-        =link_to "All Users", users_path
+        =link_to "ユーザー一覧", users_path
       %li
-        =link_to "Post", new_post_path
+        =link_to "投稿する", new_post_path
       %li
-        =link_to "Edit", edit_user_path(current_user)
+        =link_to "プロフィール編集", edit_user_path(current_user)
       %li
-        =link_to "Logout", logout_path,{method: :delete}
+        =link_to "ログアウト", logout_path,{method: :delete}
 
 .links
   .links__title
@@ -33,17 +33,3 @@
         =link_to "海外", genre_path(51)
       %li
         =link_to "その他", genre_path(61)
-        
--# .news-links
--#   .news-links__title
--#     %h2  News Links
--#   .news-link-btn.bbc
--#     =link_to "BBC", news_bbc_path
--#   .news-link-btn.wsj
--#     =link_to "WSJ", news_wsj_path
--#   .news-link-btn.yahoo
--#     =link_to "Yahoo!", news_yahoo_path
--#   .news-link-btn.nhk
--#     =link_to "NHK", news_nhk_path
-
-.news-box

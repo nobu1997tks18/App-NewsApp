@@ -1,11 +1,11 @@
 .user-data-links__title
   %h2 
-    ="#{@user.name}さん"
+    ="#{current_user.name}さん"
   .links__options
     %ul.option-list
       %li
-        =link_to "Follow #{user.followings.count}",followings_user_path(user)
+        =link_to "フォロー #{current_user.followings.count}",followings_user_path(current_user)
       %li
-        =link_to "Follower #{user.followers.count}",followers_user_path(user)
+        =link_to "フォロワー #{current_user.followers.count}",followers_user_path(current_user)
       %li
         =link_to "マイページへ", user_path(current_user)

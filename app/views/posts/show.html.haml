@@ -10,7 +10,7 @@
       .user-reply
         .user-reply__title
           %h2
-            Reply
+            コメント
         -@post.comments.each do |comment|
           =render 'shared/comments_list',{comment: comment}
         

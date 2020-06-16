@@ -12,6 +12,10 @@
           = image_tag @user.picture.url 
         .user-name
           = @user.name
+        .follow-links
+          =link_to "フォロー#{@user.followings.count}", followings_user_path(@user)
+          ="/"
+          =link_to "フォロワー#{@user.followers.count}", followers_user_path(@user)
         .follow_unfollow_btn
           %div{id:"follow_btn_#{@user.id}"}
             =render 'shared/follow_btn',{ user: @user}
