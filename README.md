@@ -29,7 +29,7 @@
 ## アプリの機能
 
 ### 1.ログイン後トップページ
-[![Image from Gyazo](https://i.gyazo.com/980a402698fa37438f6d557522354553.png)](https://gyazo.com/980a402698fa37438f6d557522354553)
+[![Image from Gyazo](https://i.gyazo.com/e236a4fbe0a2fe719c0bd41086741439.png)](https://gyazo.com/e236a4fbe0a2fe719c0bd41086741439)
 #### 左サイドバー
 - サイト内ページリンク
 #### 中央
@@ -45,10 +45,10 @@
 
 
 ### 2.ユーザー一覧ページ
-[![Image from Gyazo](https://i.gyazo.com/e06f1f6cbd4925105950a48b776dda09.png)](https://gyazo.com/e06f1f6cbd4925105950a48b776dda09)
+[![Image from Gyazo](https://i.gyazo.com/5139bf958b3e255ea062541f24cee185.png)](https://gyazo.com/5139bf958b3e255ea062541f24cee185)
 
 ### 3.ユーザ個人ページ
-[![Image from Gyazo](https://i.gyazo.com/b92591e5fc64c3a3c7894b75d15aaede.png)](https://gyazo.com/b92591e5fc64c3a3c7894b75d15aaede)
+[![Image from Gyazo](https://i.gyazo.com/15ff0bf4224ae447c42616521e7b451e.png)](https://gyazo.com/15ff0bf4224ae447c42616521e7b451e)
 ####  中央
 - ユーザプロフィール
 - ユーザトップ画像
@@ -57,10 +57,10 @@
 
 
 ### 4.ジャンル別投稿一覧
-[![Image from Gyazo](https://i.gyazo.com/41c46036002234377d0babf5b4a65bc7.png)](https://gyazo.com/41c46036002234377d0babf5b4a65bc7)
+[![Image from Gyazo](https://i.gyazo.com/a6cc7e3fef2b46818b46cfadce8b3a10.png)](https://gyazo.com/a6cc7e3fef2b46818b46cfadce8b3a10)
 
 ### 5.コメントページ
-[![Image from Gyazo](https://i.gyazo.com/4b4d340bf67b61a16eb6526c3138a7ba.png)](https://gyazo.com/4b4d340bf67b61a16eb6526c3138a7ba)
+[![Image from Gyazo](https://i.gyazo.com/3e0e02ff7ae7cb6ad9f9967b4f47c77f.png)](https://gyazo.com/3e0e02ff7ae7cb6ad9f9967b4f47c77f)
 #### 中央
 - コメント記入欄
 - コメント一覧表示
@@ -69,7 +69,7 @@
 
 
 ### 6.ニュース閲覧ページ
-[![Image from Gyazo](https://i.gyazo.com/77ef89348283c9ae6114b28e09458f1d.jpg)](https://gyazo.com/77ef89348283c9ae6114b28e09458f1d)
+[![Image from Gyazo](https://i.gyazo.com/dea32f97e0ec107c2d4f3aad042c3bc4.jpg)](https://gyazo.com/dea32f97e0ec107c2d4f3aad042c3bc4)
 #### 中央
 - ニュースAPIを利用してドメインごとにニュースを表示
 - タイトルリンクをクリックすることで、該当するニュースの外部ページへ移動
