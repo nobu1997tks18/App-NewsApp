@@ -175,15 +175,19 @@
         }
         .post-bottom-action{
           display: flex;
+          justify-content: space-around;
           .fa-trash-alt{
-            display: block;
             font-size: 20px;
           }
           a{
-            margin-left: 200px;
+            margin: 0;
+          }
+          .invisible{
+            opacity: 0;
+            cursor: default;
           }
           button{
-            margin-left: 200px;
+            margin: 0;
             background-color: $partial-bg;
             border: 0px;
           }

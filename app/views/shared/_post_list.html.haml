@@ -24,3 +24,9 @@
         ="#{post.comments.count}"
       %div{id:"like-btn-#{post.id}"}
         =render partial: 'shared/like_btn',locals:{post: post}
+      - if post.user == current_user 
+        =link_to post_path(post), method: :delete ,data: {confirm: "削除してよろしいですか？"} do
+          .far.fa-trash-alt
+      - else
+        =link_to "#" do
+          .far.fa-comment-dots.invisible
