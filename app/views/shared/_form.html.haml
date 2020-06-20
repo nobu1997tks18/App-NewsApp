@@ -9,8 +9,8 @@
           %h1 
             = yield(:title)
         .input-form__content
-          .easy-login
-            -unless current_user 
+          -unless current_user 
+            .easy-login
               =link_to "トップへ戻る", root_path 
               =link_to "お試しログインはこちら", easy_login_path, method: :post
           =form_with model:@user, local: true do |f|
