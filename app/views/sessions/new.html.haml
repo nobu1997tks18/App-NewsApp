@@ -1,16 +1,22 @@
-.input-page
-  .input-form
-    .input-form__title
-      %h1 ログイン
-    .input-form__content
-      =form_with scope: :session, url: login_path, local: true do |f|
-        .form-div.form-email
-          =f.label :email
-          =f.email_field :email,class:"text-field"
-        .form-div.form-password
-          =f.label :password
-          =f.password_field :password,class:"text-field"
-        .form-div.form-submit
-          =f.submit "送信" 
-        .easy-login
-          =link_to "お試しログイン", easy_login_path, method: :post
+.user-info
+  .user-info__left
+  .user-info__center
+    .input-page
+      .input-form
+        .input-form__title
+          %h1 ログイン
+        .input-form__content
+          =form_with scope: :session, url: login_path, local: true do |f|
+            .form-div.form-email
+              =f.label :email
+              =f.email_field :email,class:"text-field"
+            .form-div.form-password
+              =f.label :password
+              =f.password_field :password,class:"text-field"
+            .form-div.form-submit
+              =f.submit "送信" 
+            .easy-login
+              =link_to "お試しログイン", easy_login_path, method: :post
+
+              
+  .user-info__right

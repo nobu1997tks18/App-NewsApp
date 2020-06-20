@@ -131,7 +131,7 @@
     .user-post{
       margin: 5px;
       padding: 10px;
-      background-color: $partial-bg;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
       .user-post-upper{ 
         display: flex;
         &__left{
@@ -188,7 +188,7 @@
           }
           button{
             margin: 0;
-            background-color: $partial-bg;
+            background-color: $normal-bg;
             border: 0px;
           }
         }

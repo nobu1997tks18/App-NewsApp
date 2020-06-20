@@ -1,11 +1,8 @@
 .input-page{
   @include page-default-layout;
   margin: 0 auto;
-  padding: 50px;
   .input-form{
     @include center-total-layout;
-    background-color: $partial-bg;
-    margin: 0 auto;
     &__title{
       @include center-contents-title;
     }
