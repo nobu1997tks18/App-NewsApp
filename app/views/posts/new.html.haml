@@ -1,21 +1,29 @@
-.input-page
-  .input-form
-    .input-form__title
-      %h1 新規投稿
-    .input-form__content
-      = form_with model: @post, local: true do |f|
-        =render 'shared/post_errors_messages'
-        .form-div
-          =f.label "Genre"
-          .form-checkbox
-            =f.collection_check_boxes :genre_ids, Genre.all, :id, :name
-        .form-div
-          =f.label "Text"
-          =f.text_area :content ,placeholder: "140文字以内"
-        .form-div
-          =f.label "URL"
-          =f.text_field :url, placeholder: "サイトURLを記入してください"
-        .form-div.form-submit
-          = f.submit "Post"
-        .form-div.form-links
-          = link_to "戻る", :back
+.user-info
+  .user-info__left
+    =render 'shared/left_side_bar'
+  .user-info__center
+    .input-page
+      .input-form
+        .input-form__title
+          %h1 新規投稿
+        .input-form__content
+          = form_with model: @post, local: true do |f|
+            =render 'shared/post_errors_messages'
+            .form-div
+              =f.label "Genre"
+              .form-checkbox
+                =f.collection_check_boxes :genre_ids, Genre.all, :id, :name
+            .form-div
+              =f.label "Text"
+              =f.text_area :content ,placeholder: "140文字以内"
+            .form-div
+              =f.label "URL"
+              =f.text_field :url, placeholder: "サイトURLを記入してください"
+            .form-div.form-submit
+              = f.submit "Post"
+            .form-div.form-links
+              = link_to "戻る", :back
+    
+
+  .user-info__right
+    =render 'shared/right_side_bar'

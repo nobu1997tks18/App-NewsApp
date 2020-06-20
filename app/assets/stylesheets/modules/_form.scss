@@ -1,16 +1,26 @@
 .input-page{
   @include page-default-layout;
   margin: 0 auto;
-  padding: 50px;
   .input-form{
     @include center-total-layout;
-    background-color: $partial-bg;
-    margin: 0 auto;
     &__title{
       @include center-contents-title;
     }
     &__content{
       padding: 40px;
+      .easy-login{
+        display: flex;
+        font-size: 30px;
+        margin-bottom: 100px;
+        a{
+          width: 100%;
+          font-size: 30px;
+          background-color: $partial-bg;
+          border: $border-color;
+          border-radius: 10px;
+          margin: 5px;
+        }
+      }
       .form-div{
         display: flex;
         flex-direction: column;

@@ -65,7 +65,6 @@
   }
   &__center{
     @include center-total-layout;
-    height: 200vh;
     .user-profile{
       display: flex;
       padding: 20px 0 50px 0;

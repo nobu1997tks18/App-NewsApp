@@ -1,31 +1,41 @@
-.input-page
-  .input-form
-    .input-form__title
-      %h1 
-        = yield(:title)
-    .input-form__content
-      =form_with model:@user, local: true do |f|
-        = render 'shared/user_errors_messages'
-        .form-div.form-name
-          =f.label :name
-          =f.text_field :name,class:"text-field"
-        .form-div.form-email
-          =f.label :email
-          =f.email_field :email,class:"text-field"
-        .form-div.form-password
-          =f.label :password
-          =f.password_field :password,placeholder: "８文字以上",class:"text-field"
-        .form-div.form-comfirmation
-          =f.label :password_confirmation
-          =f.password_field :password_confirmation,class:"text-field"
-        .form-div.form-profile
-          =f.label :profile
-          =f.text_area :profile ,placeholder: "プロフィールを記入してください"
-        .form-div.form-picture
-          =f.label "picture (任意)"
-          =f.file_field :picture, class: "file-field"
-        .form-div.form-submit
-          =f.submit "送信" 
-        .form-div.form-links
-          =link_for_admin
-          =link_to "戻る", :back       
+.user-info
+  .user-info__left
+    -if current_user
+      =render 'shared/left_side_bar'
+  .user-info__center
+    .input-page
+      .input-form
+        .input-form__title
+          %h1 
+            = yield(:title)
+        .input-form__content
+          .easy-login
+            -unless current_user 
+              =link_to "トップへ戻る", root_path 
+              =link_to "お試しログインはこちら", easy_login_path, method: :post
+          =form_with model:@user, local: true do |f|
+            = render 'shared/user_errors_messages'
+            .form-div.form-name
+              =f.label :name
+              =f.text_field :name,class:"text-field"
+            .form-div.form-email
+              =f.label :email
+              =f.email_field :email,class:"text-field"
+            .form-div.form-password
+              =f.label :password
+              =f.password_field :password,placeholder: "８文字以上",class:"text-field"
+            .form-div.form-comfirmation
+              =f.label :password_confirmation
+              =f.password_field :password_confirmation,class:"text-field"
+            .form-div.form-profile
+              =f.label :profile
+              =f.text_area :profile ,placeholder: "プロフィールを記入してください"
+            .form-div.form-picture
+              =f.label "picture (任意)"
+              =f.file_field :picture, class: "file-field"
+            .form-div.form-submit
+              =f.submit "送信"   
+
+  .user-info__right
+    -if current_user
+      =render 'shared/right_side_bar'
