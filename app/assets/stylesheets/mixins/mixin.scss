@@ -106,7 +106,7 @@
 }
 
 @mixin page-default-layout{
-  // min-height: 92vh;
+  min-height: 92vh;
   display: flex;
   background-color: $normal-bg;
   color: white;
@@ -117,8 +117,9 @@
   padding-left: 30px;
   flex-direction: column;
   text-align: center;
-  border-top: $border-color;
+  border: $border-color;
   padding-right: 20px;
+
 }
 
 @mixin left-items-box{
@@ -130,10 +131,10 @@
 }
 
 @mixin center-total-layout{
-  // height: 100%;
+  height: 100%;
   width: 100%;
   background-color: $normal-bg;
-  border: $border-color;
+  border-top: $border-color;
   text-align: center;
   overflow: scroll;
 }
@@ -146,7 +147,7 @@
 
   @mixin right-total-layout{
     width: 25%;
-    border-top: $border-color;
+    border: $border-color;
   }
   
   @mixin right-items-box{
