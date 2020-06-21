@@ -35,6 +35,9 @@
               =f.file_field :picture, class: "file-field"
             .form-div.form-submit
               =f.submit "送信"   
+            -if current_user && @user.admin != true
+              .delete-btn
+                =link_to "アカウント削除",user_path(@user), method: :delete, data:{confirm: "アカウントを削除しますか？"}
 
   .user-info__right
     -if current_user
