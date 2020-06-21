@@ -82,7 +82,7 @@
 [![Image from Gyazo](https://i.gyazo.com/1d1957c23356caa65c00cbf4c528f7cf.png)](https://gyazo.com/1d1957c23356caa65c00cbf4c528f7cf)
 #### ユーザ情報編集
 [![Image from Gyazo](https://i.gyazo.com/314998eba66fd9d7bd1ec6db3a2cb759.png)](https://gyazo.com/314998eba66fd9d7bd1ec6db3a2cb759)
-[![Image from Gyazo](https://i.gyazo.com/b6f169311ece19dadb3950a3b77ef914.png)](https://gyazo.com/b6f169311ece19dadb3950a3b77ef914)
+[![Image from Gyazo](https://i.gyazo.com/d6dd1ea8b3848d2383d51abb433aae61.png)](https://gyazo.com/d6dd1ea8b3848d2383d51abb433aae61)
 - 管理者ユーザー以外はアカウント削除ボタンが表示される
 
 #### 投稿フォーム
