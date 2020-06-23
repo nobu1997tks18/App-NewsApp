@@ -20,3 +20,12 @@ $(function() {
   followTabs.click(tabSwitch);    
 });
 
+$(function(){
+  let headerBtn = $('#header-btn');
+  function openHeader() {
+    $('.page-links').toggle('show');
+    // $('.show').toggle();
+  }
+  headerBtn.click(openHeader).toggle;    
+});
+

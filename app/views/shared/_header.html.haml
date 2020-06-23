@@ -1,0 +1,28 @@
+.header
+  .display-btn
+    %i{class:"fas fa-bars", id: "header-btn"}
+  .user-links.page-links
+    %h1 ページリンク
+    =link_to "トップ", root_path
+    =link_to "ユーザー一覧", users_path 
+    =link_to "投稿する", new_post_path     
+    =link_to "プロフィール編集", edit_user_path(current_user)
+    =link_to "フォロー #{current_user.followings.count}",followings_user_path(current_user)
+    =link_to "フォロワー #{current_user.followers.count}",followers_user_path(current_user)
+    =link_to "マイページへ", user_path(current_user)
+    =link_to "ログアウト", logout_path,{method: :delete}
+  .genre-links.page-links
+    %h1 ジャンルリンク
+    =link_to "経済", genre_path(1)
+    =link_to "ビジネス", genre_path(11)
+    =link_to "政治", genre_path(21)
+    =link_to "マネー", genre_path(31)
+    =link_to "スポーツ", genre_path(41)
+    =link_to "海外", genre_path(51)
+    =link_to "その他", genre_path(61)
+  .newssite-links.page-links
+    %h1 ニュースリンク
+    =link_to "BBC", news_bbc_path
+    =link_to "WSJ", news_wsj_path
+    =link_to "Yahoo!", news_yahoo_path
+    =link_to "NHK", news_nhk_path
