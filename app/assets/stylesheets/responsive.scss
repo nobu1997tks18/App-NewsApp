@@ -1,0 +1,170 @@
+@media screen and (max-width:480px){
+  .users-index{
+    width: 100%;
+    &__left{
+      display: none;
+    }
+    &__center{
+      width: 100%;
+      .user-contents{
+        width: 100%;
+        padding:5px;
+        .user-content{
+          width: 100%;
+          .user-content-upper{
+            position: relative;
+            &__right{
+              .user-name{
+                width: 100%;
+              }
+            }
+            .follow-unfollow-btn{
+              position: absolute;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+    &__right{
+      display: none;
+    }
+  }
+
+  .user-info{
+    width: 100%;
+    &__left{
+      display: none;
+    }
+    &__right{
+      display: none;
+    }
+    &__center{
+      .user-profile{
+        height: 250px;
+        &__left{
+          .user-picture{
+            img{
+              height: 100px;
+              width: 100px;
+            }
+          }
+          .follow-links{
+            font-size: 5px;
+          }
+          .list-btn{
+            width:100px;
+            font-size: 13px;
+          }
+        }
+        &__right{
+          height: 200px;
+        }
+      }
+    }
+    &__right{
+      display: none;
+    }
+  }
+  .show-contents{
+    .user-posts{
+      .user-post{
+        padding: 5px;
+        margin: 0;
+        .user-post-upper{
+          &__left{
+            img{
+              height: 50px;
+              width: 50px;
+            }
+          }
+          &__right{
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+  .news-index{
+    &__left{
+      display: none;
+    }
+    &__center{
+      width: 100%;
+      .news-contents{
+        .news-content{
+          &__title{
+            width: 100%;
+          }
+        }
+      }
+    }
+    &__right{
+      display:none;
+    }
+  }
+  .comments-for-post{
+    .comment-for-post{
+      padding: 5px;
+      margin: 0;
+    }
+    .comment-upper{
+      &__left{
+        img{
+          height: 50px;
+          width: 50px;
+        }
+      }
+      &__right{
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .top-page{
+    &__top{
+      height: 250px;
+      h1{
+        font-size: 30px;
+        padding: 20px;
+      }
+      p{
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+      }
+      .top-links{
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+        a{
+          width: 200px;
+          font-size: 13px;
+          margin: 10px;
+          width: 150px;
+        }
+      }
+    }
+    &__center{
+      h2{
+        font-size: 30px;
+      }
+      .intro-contents{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        &__content{
+          width: 95%;
+          margin: 5px;
+          .intro-title{
+            font-size: 30px;
+          }
+          .intro-info{
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+  

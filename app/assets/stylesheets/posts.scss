@@ -66,13 +66,6 @@
           font-size: 20px;
           padding: 20px;
         }
-        .intro-links{
-          @include news_link_btn;
-          .news-links{
-            flex-direction: column;
-            width:100%;
-          }
-        }
         .intro-images{
           height: 300px;
           width: 300px;
@@ -131,7 +124,7 @@
     .user-post{
       margin: 5px;
       padding: 10px;
-      border-bottom: 1px solid rgba(255,255,255,0.3);
+      border-top: 1px solid rgba(255,255,255,0.3);
       .user-post-upper{ 
         display: flex;
         &__left{
